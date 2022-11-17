@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/homefragment"
+        android:title="@string/home"
+        android:icon="@drawable/child_selector" />
+    <item
+        android:id="@+id/mapActivity"
+        android:title="@string/map"
+        android:icon="@drawable/locationoutlined" />
+    <item
+        android:id="@+id/weather"
+        android:title="@string/weather"
+        android:icon="@drawable/weather_selector" />
+    <item
+        android:id="@+id/tools"
+        android:title="@string/tools"
+        android:icon="@drawable/tools_selector" />
+</menu>

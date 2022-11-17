@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/frameLayout" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_marginBottom="55dp">
+    <SurfaceView android:id="@+id/PREVIEW" android:layout_width="1dp" android:layout_height="1dp" android:layout_centerInParent="true"/>
+    <ImageView android:id="@+id/imageView4" android:layout_width="match_parent" android:layout_height="100dp" android:layout_marginBottom="-12dp" android:src="@drawable/evaclogo_2" android:layout_below="@+id/toolbar"/>
+    <TextView android:textSize="23sp" android:textStyle="bold" android:textColor="@color/black" android:gravity="center_horizontal" android:id="@+id/textView" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Tools" android:layout_below="@+id/imageView4" android:textAllCaps="true" android:textAlignment="center"/>
+
+    <ImageButton
+        android:id="@+id/toggleButton"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_centerInParent="true"
+        android:backgroundTint="#00000000"
+        android:cropToPadding="false"
+        android:scaleType="fitXY"
+        android:src="@drawable/flashoff"
+        tools:ignore="SpeakableTextPresentCheck" />
+    <TextView android:textSize="15sp" android:id="@+id/textViewoff" android:layout_width="wrap_content" android:layout_height="20dp" android:text="Flashlight OFF" android:layout_below="@+id/toggleButton" android:layout_centerInParent="true"/>
+    <Button android:textSize="14sp" android:textStyle="bold" android:id="@+id/button" android:layout_width="wrap_content" android:layout_height="60dp" android:layout_marginTop="10dp" android:text="CALL 911" android:layout_below="@+id/textViewoff" android:layout_centerInParent="true" android:backgroundTint="#17b739" app:icon="@drawable/ic_phone"/>
+    <Button android:id="@+id/button2" android:layout_width="wrap_content" android:layout_height="55dp" android:text="Play SOS" android:layout_below="@+id/emergency" android:layout_centerInParent="true" android:backgroundTint="#ff0a0a" app:icon="@android:drawable/ic_media_play"/>
+    <Button android:id="@+id/button3" android:layout_width="wrap_content" android:layout_height="55dp" android:text="Pause SOS" android:layout_below="@+id/button2" android:layout_centerInParent="true" android:backgroundTint="#000" app:icon="@android:drawable/ic_media_pause"/>
+    <Button android:id="@+id/emergency" android:layout_width="wrap_content" android:layout_height="55dp" android:text="Emergency SMS" android:layout_below="@+id/button" android:layout_centerInParent="true" android:backgroundTint="#ff0a0a" app:icon="@drawable/sms"/>
+    <androidx.appcompat.widget.Toolbar android:theme="?attr/actionBarTheme" android:id="@+id/toolbar" android:background="@color/maingreen" android:layout_width="match_parent" android:layout_height="58dp" android:minHeight="?attr/actionBarSize" app:logo="@mipmap/ic_launcher" app:title="EvacuNation" app:titleTextColor="@color/white"/>
+</RelativeLayout>

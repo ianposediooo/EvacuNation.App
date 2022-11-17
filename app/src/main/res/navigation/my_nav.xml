@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/my_nav"
+    app:startDestination="@id/homefragment">
+
+    <fragment
+        android:id="@+id/weather"
+        android:name="com.example.evacunation.weather"
+        android:label="fragment_weather"
+        tools:layout="@layout/fragment_weather" />
+    <fragment
+        android:id="@+id/tools"
+        android:name="com.example.evacunation.tools"
+        android:label="fragment_tools"
+        tools:layout="@layout/fragment_tools" />
+    <fragment
+        android:id="@+id/homefragment"
+        android:name="com.example.evacunation.home"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" />
+</navigation>

@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <SurfaceView android:id="@+id/PREVIEW" android:layout_width="1dp" android:layout_height="1dp"/>
+    <ScrollView android:layout_width="match_parent" android:layout_height="match_parent">
+        <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent">
+            <RelativeLayout android:layout_width="match_parent" android:layout_height="match_parent" android:layout_marginLeft="20dp" android:layout_marginTop="20dp" android:layout_marginRight="20dp">
+
+                <TextView
+                    android:id="@+id/txtdisaster"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:shadowDx="2"
+                    android:shadowDy="2"
+                    android:shadowRadius="3"
+                    android:text="TOOLS"
+                    android:textSize="30sp"
+                    android:textStyle="bold"
+                    android:textColor="?attr/colorOnSurface"/>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    app:cardCornerRadius="10dp"
+                    android:elevation="10dp">
+
+                    <ImageView
+                        android:layout_width="120dp"
+                        android:layout_height="120dp"
+                        android:background="?attr/colorPrimary"
+                        android:src="@drawable/evaclogo_2" />
+
+                </androidx.cardview.widget.CardView>
+
+            </RelativeLayout>
+            <GridLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="15dp" android:rowCount="3" android:columnCount="2" android:columnOrderPreserved="false" android:alignmentMode="alignMargins">
+                <androidx.cardview.widget.CardView android:id="@+id/card1" android:layout_width="100dp" android:layout_height="175dp" android:layout_margin="12dp" android:foreground="?android:attr/selectableItemBackground" android:layout_rowWeight="1" android:layout_columnWeight="1" app:cardBackgroundColor="#e40a16" app:cardCornerRadius="20dp" app:cardElevation="10dp">
+                    <LinearLayout android:gravity="center" android:orientation="vertical" android:padding="16dp" android:layout_width="match_parent" android:layout_height="match_parent">
+
+                        <ImageView
+                            android:layout_width="80dp"
+                            android:layout_height="80dp"
+                            android:src="@drawable/emergency"
+                            app:tint="@color/white" />
+
+                        <TextView
+                            android:textSize="16sp"
+                            android:textColor="@color/white"
+                            android:gravity="center_horizontal"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="12dp"
+                            android:text="Call\nEmergency 911"
+                            android:textAlignment="center"/>
+
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+                <androidx.cardview.widget.CardView android:id="@+id/card2" android:layout_width="100dp" android:layout_height="175dp" android:layout_margin="12dp" android:foreground="?android:attr/selectableItemBackground" android:layout_rowWeight="1" android:layout_columnWeight="1" app:cardBackgroundColor="#e40a16" app:cardCornerRadius="20dp" app:cardElevation="10dp">
+                    <LinearLayout android:gravity="center" android:orientation="vertical" android:padding="16dp" android:layout_width="match_parent" android:layout_height="match_parent">
+                        <ImageView android:layout_width="80dp" android:layout_height="80dp" android:src="@drawable/smswhite"/>
+                        <TextView android:textSize="16sp" android:textColor="@color/white" android:gravity="center_horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="12dp" android:text="Emergency Message" android:textAlignment="center"/>
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+                <androidx.cardview.widget.CardView android:id="@+id/card3" android:layout_width="100dp" android:layout_height="175dp" android:layout_margin="12dp" android:foreground="?android:attr/selectableItemBackground" android:layout_rowWeight="1" android:layout_columnWeight="1" app:cardBackgroundColor="#ffa500" app:cardCornerRadius="20dp" app:cardElevation="10dp">
+                    <LinearLayout android:gravity="center" android:orientation="vertical" android:padding="16dp" android:layout_width="match_parent" android:layout_height="match_parent">
+
+                        <ImageButton
+                            android:id="@+id/flash"
+                            android:layout_width="80dp"
+                            android:layout_height="80dp"
+                            android:backgroundTint="#00000000"
+                            android:src="@drawable/flashofff"
+                            tools:ignore="SpeakableTextPresentCheck" />
+
+                        <TextView android:textSize="16sp" android:textColor="@color/white" android:gravity="center_horizontal" android:id="@+id/textViewoff" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="15dp" android:text="Flashlight\nis OFF" android:layout_below="@+id/toggleButton" android:layout_centerInParent="true" android:textAlignment="center"/>
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+                <androidx.cardview.widget.CardView android:id="@+id/card4" android:layout_width="100dp" android:layout_height="175dp" android:layout_margin="12dp" android:foreground="?android:attr/selectableItemBackground" android:layout_rowWeight="1" android:layout_columnWeight="1" app:cardBackgroundColor="#32cd32" app:cardCornerRadius="20dp" app:cardElevation="10dp">
+                    <LinearLayout android:gravity="center" android:orientation="vertical" android:padding="16dp" android:layout_width="match_parent" android:layout_height="match_parent">
+                        <ImageView android:layout_width="80dp" android:layout_height="80dp" android:src="@drawable/play"/>
+                        <TextView android:textSize="16sp" android:textColor="@color/white" android:gravity="center_horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="12dp" android:text="Play SOS\nSound" android:textAlignment="center"/>
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+                <androidx.cardview.widget.CardView android:id="@+id/card5" android:layout_width="100dp" android:layout_height="175dp" android:layout_margin="12dp" android:foreground="?android:attr/selectableItemBackground" android:layout_rowWeight="1" android:layout_columnWeight="1" app:cardBackgroundColor="@color/black" app:cardCornerRadius="20dp" app:cardElevation="10dp">
+                    <LinearLayout android:gravity="center" android:orientation="vertical" android:padding="16dp" android:layout_width="match_parent" android:layout_height="match_parent">
+                        <ImageView android:layout_width="80dp" android:layout_height="80dp" android:src="@drawable/stopcircle"/>
+                        <TextView android:textSize="16sp" android:textColor="@color/white" android:gravity="center_horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="12dp" android:text="Stop SOS\nSound" android:textAlignment="center"/>
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+                <androidx.cardview.widget.CardView android:id="@+id/card6" android:layout_width="100dp" android:layout_height="175dp" android:layout_margin="12dp" android:foreground="?android:attr/selectableItemBackground" android:layout_rowWeight="1" android:layout_columnWeight="1" app:cardBackgroundColor="#008000" app:cardCornerRadius="20dp" app:cardElevation="10dp">
+                    <LinearLayout android:gravity="center" android:orientation="vertical" android:padding="16dp" android:layout_width="match_parent" android:layout_height="match_parent">
+
+                        <ImageView
+                            android:layout_width="80dp"
+                            android:layout_height="80dp"
+                            android:src="@drawable/listevac" />
+
+                        <TextView
+                            android:textSize="16sp"
+                            android:textColor="@color/white"
+                            android:gravity="center_horizontal"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="12dp"
+                            android:text="Evacuation\nCenters List"
+                            android:textAlignment="center"/>
+
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+<!--                <com.google.android.material.card.MaterialCardView style="@style/Widget.Material3.CardView.Elevated" android:id="@+id/card7" android:layout_width="100dp" android:layout_height="175dp" android:layout_margin="12dp" android:foreground="?android:attr/selectableItemBackground" android:layout_rowWeight="1" android:layout_columnWeight="1" app:cardCornerRadius="20dp" app:cardElevation="10dp">-->
+<!--                    <LinearLayout-->
+<!--                        android:gravity="center"-->
+<!--                        android:orientation="vertical"-->
+<!--                        android:padding="16dp"-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="match_parent">-->
+
+<!--                        <ImageView-->
+<!--                            android:id="@+id/night"-->
+<!--                            android:layout_width="80dp"-->
+<!--                            android:layout_height="80dp"-->
+<!--                            android:backgroundTint="#00000000"-->
+<!--                            android:src="@drawable/darkmode"-->
+<!--                            tools:ignore="SpeakableTextPresentCheck"-->
+<!--                            app:tint="?attr/colorOnSurface" />-->
+
+<!--                        <TextView-->
+<!--                            android:textSize="16sp"-->
+<!--                            android:textColor="?attr/colorOnSurface"-->
+<!--                            android:gravity="center_horizontal"-->
+<!--                            android:id="@+id/darkmodeoff"-->
+<!--                            android:layout_width="wrap_content"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:layout_marginTop="15dp"-->
+<!--                            android:text="Dark Mode\nON/OFF"-->
+<!--                            android:layout_below="@+id/toggleButton"-->
+<!--                            android:layout_centerInParent="true"-->
+<!--                            android:textAlignment="center"/>-->
+
+<!--                    </LinearLayout>-->
+<!--                </com.google.android.material.card.MaterialCardView>-->
+
+            </GridLayout>
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

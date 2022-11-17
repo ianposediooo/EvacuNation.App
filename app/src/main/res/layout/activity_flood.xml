@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent">
+        <RelativeLayout android:layout_width="match_parent" android:layout_height="match_parent" android:layout_marginLeft="20dp" android:layout_marginTop="20dp" android:layout_marginRight="20dp">
+
+            <TextView
+                android:layout_marginEnd="5dp"
+                android:id="@+id/txtdisaster"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:layout_toStartOf="@+id/logotop"
+                android:shadowDx="2"
+                android:shadowDy="2"
+                android:shadowRadius="3"
+                android:text="FLOOD\nPREPAREDNESS\nTIPS"
+                android:textColor="?attr/colorOnSurface"
+                android:textSize="25sp"
+                android:textStyle="bold" />
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/logotop"
+                style="@style/Widget.Material3.CardView.Elevated"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                app:cardCornerRadius="10dp"
+                android:elevation="10dp">
+
+                <ImageView
+                    android:layout_width="120dp"
+                    android:layout_height="120dp"
+                    android:background="?attr/colorPrimary"
+                    android:src="@drawable/evaclogo_2" />
+
+            </com.google.android.material.card.MaterialCardView>
+        </RelativeLayout>
+        <GridLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="15dp" android:rowCount="1" android:columnCount="1" android:columnOrderPreserved="false" android:alignmentMode="alignMargins">
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/typhooncardtop"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="12dp"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                app:cardCornerRadius="20dp"
+                app:cardElevation="6dp">
+
+                <LinearLayout android:layout_gravity="center" android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                    <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/flooding" android:adjustViewBounds="true"/>
+                    <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_marginLeft="20dp" android:layout_marginTop="10dp" android:layout_marginRight="20dp" android:layout_marginBottom="20dp" android:layout_marginStart="20dp" android:layout_marginEnd="20dp">
+                        <TextView
+                            android:textColor="?attr/colorOnSurface"
+                            android:textSize="20sp"
+                            android:textStyle="bold"
+                            android:gravity="center_horizontal"
+                            android:layout_gravity="center"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="FLOODS"
+                            android:lines="1"
+                            android:textAlignment="center"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:elevation="10dp"
+                            android:text="Flood is the rising of water level until it overflows its natural or artificial confines and submerge the surrounding area."
+                            android:textSize="14sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="3dp"
+                            android:elevation="10dp"
+                            android:text="(Ang baha ay pag-apaw ng sobra-sobrang tubig sa natural nitong daluyan tulad ng sapa, ilog at dagat dahilan upang malubog ang nakapalibot ditong lupa.)"
+                            android:textSize="12sp"
+                            android:textStyle="italic" />
+                    </LinearLayout>
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="12dp"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                app:cardCornerRadius="20dp"
+                app:cardElevation="6dp">
+
+                <LinearLayout android:layout_gravity="center" android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                    <ImageView android:layout_gravity="center_horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/alertflood" android:adjustViewBounds="true"/>
+                    <TextView
+                        android:textColor="?attr/colorOnSurface"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        android:gravity="center_horizontal"
+                        android:layout_gravity="center"
+                        android:padding="5dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginRight="20dp"
+                        android:layout_marginBottom="20dp"
+                        android:text="FLOOD ALERT LEVELS"
+                        android:textAlignment="center"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginEnd="20dp"/>
+
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+        </GridLayout>
+        <GridLayout android:layout_width="match_parent" android:layout_height="match_parent" android:layout_marginTop="15dp" android:rowCount="1" android:columnCount="1">
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="12dp"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                app:cardCornerRadius="20dp"
+                app:cardElevation="6dp"
+                >
+
+                <!--                <pl.droidsonroids.gif.GifImageView-->
+                <!--                    android:layout_width="match_parent"-->
+                <!--                    android:layout_height="40dp"-->
+                <!--                    android:src="@drawable/arrowright"-->
+                <!--                    android:scaleType="fitXY"-->
+                <!--                    android:adjustViewBounds="true"/>-->
+
+                <TextView
+                    android:textColor="?attr/colorOnSurface"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:gravity="center_horizontal"
+                    android:layout_gravity="center"
+                    android:padding="10dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="SWIPE RIGHT FOR MORE &apos;WHAT TO DO&apos; TIPS >>"
+                    android:textAlignment="center"
+                    android:elevation="6dp"
+                    />
+
+            </com.google.android.material.card.MaterialCardView>
+        </GridLayout>
+        <HorizontalScrollView android:layout_width="match_parent" android:layout_height="wrap_content">
+            <GridLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:rowCount="1" android:columnCount="3" android:columnOrderPreserved="false" android:alignmentMode="alignMargins">
+                <com.google.android.material.card.MaterialCardView style="@style/Widget.Material3.CardView.Elevated" android:layout_width="340dp" android:layout_height="wrap_content" android:layout_margin="12dp" android:foreground="?android:attr/selectableItemBackground" android:layout_rowWeight="1" android:layout_columnWeight="1" app:cardBackgroundColor="#f7b500" app:cardCornerRadius="20dp" app:cardElevation="6dp">
+                    <LinearLayout android:gravity="center" android:orientation="vertical" android:padding="10dp" android:layout_width="match_parent" android:layout_height="wrap_content">
+                        <TextView android:textSize="25dp" android:textStyle="bold" android:textColor="@color/white" android:gravity="center_horizontal" android:layout_gravity="center" android:padding="5dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="What to do BEFORE flood" android:textAlignment="center" android:elevation="6dp"/>
+                        <TextView android:textSize="15sp" android:textColor="@color/white" android:gravity="center_horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="KNOW THE HAZARDS IN YOUR AREA." android:textAlignment="center"/>
+                        <LinearLayout android:orientation="horizontal" android:padding="10dp" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                            <ImageView android:layout_width="80dp" android:layout_height="80dp" android:src="@drawable/radio"/>
+                            <TextView android:textSize="15dp" android:textColor="@color/white" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10dp" android:text="Monitor the news for weather updates, warnings and advisories. (Alamin ang balita ukol sa panahon at mga anunsyong pangkaligtasan.)"/>
+                        </LinearLayout>
+                        <LinearLayout android:orientation="horizontal" android:padding="10dp" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                            <ImageView android:layout_width="80dp" android:layout_height="80dp" android:src="@drawable/checklist"/>
+                            <TextView android:textSize="15dp" android:textColor="@color/white" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10dp" android:text="Know the flood early warning and evacuation plan of the community. (Alamin ang plano ng komunidad sa pagbibigay-babala at paglikas dahil sa baha.)"/>
+                        </LinearLayout>
+                        <LinearLayout android:orientation="horizontal" android:padding="10dp" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                            <ImageView android:layout_width="80dp" android:layout_height="80dp" android:src="@drawable/handsup"/>
+                            <TextView android:textSize="15dp" android:textColor="@color/white" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10dp" android:text="Participate in community flood preparedness actions and drills. (Makilahok sa mga pagsasanay at paghahanda ng komunidad sa baha.)"/>
+                        </LinearLayout>
+                        <LinearLayout android:orientation="horizontal" android:padding="10dp" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                            <ImageView android:layout_width="80dp" android:layout_height="80dp" android:src="@drawable/securehome"/>
+                            <TextView android:textSize="15dp" android:textColor="@color/white" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10dp" android:text="Secure your home. Move essential furniture and items to the upper floor. (Siguraduhing ligtas ang iyong tahanan. Iakyat ang mga mahahalagang kagamitan sa mas mataas na lugar.)"/>
+                        </LinearLayout>
+                        <LinearLayout android:orientation="horizontal" android:padding="10dp" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                            <ImageView android:layout_width="80dp" android:layout_height="80dp" android:src="@drawable/electric"/>
+                            <TextView android:textSize="15dp" android:textColor="@color/white" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10dp" android:text="Before evacuating, turn off all main switches of electricity, water and LPG tanks. (Bago lumikas, isarado ang mga main switches ng kuryente, tubig at tangke ng LPG.)"/>
+                        </LinearLayout>
+                        <LinearLayout android:orientation="horizontal" android:padding="10dp" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                            <ImageView android:layout_width="80dp" android:layout_height="80dp" android:src="@drawable/pets"/>
+                            <TextView android:textSize="15dp" android:textColor="@color/white" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10dp" android:text="Put livestock and pets in a safe area or designated evacuation sites for animals. (Ilikas ang mga alagang hayop sa ligtas lugar.)"/>
+                        </LinearLayout>
+                        <LinearLayout android:orientation="horizontal" android:padding="10dp" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                            <ImageView android:layout_width="80dp" android:layout_height="80dp" android:src="@drawable/go"/>
+                            <TextView android:textSize="15dp" android:textColor="@color/white" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10dp" android:text="When order is received, immediately evacuate to higher and safer grounds. (Kapag inabisuhan ng kinauukulan, mabilis na lumikas sa mataas at ligtas na lugar.)"/>
+                        </LinearLayout>
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+                <com.google.android.material.card.MaterialCardView style="@style/Widget.Material3.CardView.Elevated" android:id="@+id/card2" android:layout_width="340dp" android:layout_height="wrap_content" android:layout_margin="12dp" android:foreground="?android:attr/selectableItemBackground" android:layout_rowWeight="1" android:layout_columnWeight="1" app:cardBackgroundColor="#33a532" app:cardCornerRadius="20dp" app:cardElevation="6dp">
+                    <LinearLayout android:gravity="center" android:orientation="vertical" android:padding="10dp" android:layout_width="match_parent" android:layout_height="wrap_content">
+                        <TextView android:textSize="25dp" android:textStyle="bold" android:textColor="@color/white" android:gravity="center_horizontal" android:layout_gravity="center" android:padding="5dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="What to do DURING a flood" android:textAlignment="center" android:elevation="6dp"/>
+                        <TextView android:textSize="15sp" android:textColor="@color/white" android:gravity="center_horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="STAY ON HIGHER GROUNDS!" android:textAlignment="center"/>
+                        <LinearLayout android:orientation="horizontal" android:padding="10dp" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                            <ImageView android:layout_width="80dp" android:layout_height="80dp" android:src="@drawable/house"/>
+                            <TextView android:textSize="15dp" android:textColor="@color/white" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10dp" android:text="Stay indoors and stay tuned for latest news and weather updates. (Manatili sa loob ng bahay at patuloy na makinig sa ulat ng panahon.)"/>
+                        </LinearLayout>
+                        <LinearLayout android:orientation="horizontal" android:padding="10dp" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                            <ImageView android:layout_width="80dp" android:layout_height="80dp" android:src="@drawable/electric" android:backgroundTint="@color/black" android:backgroundTintMode="multiply"/>
+                            <TextView android:textSize="15dp" android:textColor="@color/white" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10dp" android:text="DO NOT touch electrical equipment if you are wet or standing in floodwater. (Huwag hawakan ang mga kagamitang de kuryente kung ikaw ay basa o nakatayo sa tubig baha.)"/>
+                        </LinearLayout>
+                        <LinearLayout android:orientation="horizontal" android:padding="10dp" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                            <ImageView android:layout_width="80dp" android:layout_height="80dp" android:src="@drawable/swimming"/>
+                            <TextView android:textSize="15dp" android:textColor="@color/white" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10dp" android:text="DO NOT go swimming or boating in swollen rivers. (Huwag lumangoy o mamangka sa umaapaw na ilog.)"/>
+                        </LinearLayout>
+                        <LinearLayout android:orientation="horizontal" android:padding="10dp" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                            <ImageView android:layout_width="80dp" android:layout_height="80dp" android:src="@drawable/walkingflood"/>
+                            <TextView android:textSize="15dp" android:textColor="@color/white" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10dp" android:text="DO NOT cross streams when water level is already above the knee. (Huwag tumawid ng sapa o ilog kung lagpas tuhod na ang tubig baha.)"/>
+                        </LinearLayout>
+                        <LinearLayout android:orientation="horizontal" android:padding="10dp" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                            <ImageView android:layout_width="80dp" android:layout_height="80dp" android:src="@drawable/carflood"/>
+                            <TextView android:textSize="15dp" android:textColor="@color/white" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10dp" android:text="DO NOT walk or drive through flooded areas. (Hawag maglakad o magmaneho sa lugar na baha.)"/>
+                        </LinearLayout>
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+                <com.google.android.material.card.MaterialCardView style="@style/Widget.Material3.CardView.Elevated" android:id="@+id/card3" android:layout_width="340dp" android:layout_height="match_parent" android:layout_margin="12dp" android:layout_rowWeight="1" android:layout_columnWeight="1" app:cardBackgroundColor="#cf142b" app:cardCornerRadius="20dp" app:cardElevation="6dp">
+                    <LinearLayout android:gravity="center" android:orientation="vertical" android:padding="10dp" android:layout_width="match_parent" android:layout_height="wrap_content">
+                        <TextView android:textSize="25dp" android:textStyle="bold" android:textColor="@color/white" android:gravity="center_horizontal" android:layout_gravity="center" android:padding="5dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="What to do AFTER a flood" android:textAlignment="center" android:elevation="6dp"/>
+                        <TextView android:textSize="15sp" android:textColor="@color/white" android:gravity="center_horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="STAY ALERT AND KEEP SAFE." android:textAlignment="center"/>
+                        <LinearLayout android:orientation="horizontal" android:padding="10dp" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                            <ImageView android:layout_width="80dp" android:layout_height="80dp" android:src="@drawable/go"/>
+                            <TextView android:textSize="15dp" android:textColor="@color/white" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10dp" android:text="Leave the evacuation area only when authorities say it is safe to return home. (Lisanin lamang ang evacuation area kapag ligtas na ayon sa kinauukulan.)"/>
+                        </LinearLayout>
+                        <LinearLayout android:orientation="horizontal" android:padding="10dp" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                            <ImageView android:layout_width="80dp" android:layout_height="80dp" android:src="@drawable/telephone"/>
+                            <TextView android:textSize="15dp" android:textColor="@color/white" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10dp" android:text="Report fallen trees and electric posts to proper authorities. (Ipagbigay-alam sa kinauukulan ang mga natumbang puno at poste ng kuryente o mga linya ng tubig at telepono.)"/>
+                        </LinearLayout>
+                        <LinearLayout android:orientation="horizontal" android:padding="10dp" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                            <ImageView android:layout_width="80dp" android:layout_height="80dp" android:src="@drawable/electric"/>
+                            <TextView android:textSize="15dp" android:textColor="@color/white" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10dp" android:text="Check for wet or submerged electrical outlets and appliances before turning on electricity. (Suguraduhing walang basa o nakababad na outlet o kagamitan bago buksan ang linya ng kuryente.)"/>
+                        </LinearLayout>
+                        <LinearLayout android:orientation="horizontal" android:padding="10dp" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                            <ImageView android:layout_width="80dp" android:layout_height="80dp" android:src="@drawable/homerepair"/>
+                            <TextView android:textSize="15dp" android:textColor="@color/white" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10dp" android:text="Check your house for possible damages and repair as necessary. (Suriin ang bahay kung may mga nasira at ipaayos ang mga ito kung kailangan.)"/>
+                        </LinearLayout>
+                        <LinearLayout android:orientation="horizontal" android:padding="10dp" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                            <ImageView android:layout_width="80dp" android:layout_height="80dp" android:src="@drawable/poison"/>
+                            <TextView android:textSize="15dp" android:textColor="@color/white" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10dp" android:text="Make sure that the food and water for drinking are not contaminated by flood water. (Siguraduhing malinis ang pagkain at inuming tubig.)"/>
+                        </LinearLayout>
+                        <LinearLayout android:orientation="horizontal" android:padding="10dp" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                            <ImageView android:layout_width="80dp" android:layout_height="80dp" android:src="@drawable/trashcan"/>
+                            <TextView android:textSize="15dp" android:textColor="@color/white" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10dp" android:text="Throw away rainwater in cans, pots and tires to prevent breeding of mosquitoes. (Itapon ang najpong tubig sa mga lata, paso at gulong upang hindi pamahayan ng lamok.)"/>
+                        </LinearLayout>
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+            </GridLayout>
+        </HorizontalScrollView>
+    </LinearLayout>
+</ScrollView>

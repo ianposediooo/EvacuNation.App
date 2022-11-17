@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:layout_width="match_parent" android:layout_height="match_parent">
+
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/map"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/toolbar2"/>
+<!--    <androidx.cardview.widget.CardView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="8dp" android:layout_centerHorizontal="true" app:cardBackgroundColor="@color/maingreen" app:cardCornerRadius="20dp" app:cardElevation="10dp">-->
+<!--        <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content">-->
+<!--            <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="10dp" android:layout_marginRight="10dp">-->
+<!--                <ImageView android:id="@+id/evaclogooo" android:layout_width="80dp" android:layout_height="80dp" android:src="@drawable/evaclogo_2" android:layout_alignParentLeft="true"/>-->
+<!--                <TextView android:textSize="17sp" android:textStyle="bold" android:textColor="@color/white" android:id="@+id/txtdisaster" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="-10dp" android:layout_marginBottom="5dp" android:text="MAP" android:shadowColor="@color/text_shadow" android:shadowDx="2" android:shadowDy="2" android:shadowRadius="3" android:layout_below="@+id/evaclogooo" android:layout_centerHorizontal="true"/>-->
+<!--            </RelativeLayout>-->
+<!--        </LinearLayout>-->
+<!--    </androidx.cardview.widget.CardView>-->
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/toolbar2"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/maingreen"
+            android:minHeight="?attr/actionBarSize"
+            android:theme="?attr/actionBarTheme"
+            app:logo="@drawable/title4"
+            app:logoAdjustViewBounds="false"
+            app:titleTextColor="@color/white" />
+
+    <RelativeLayout
+        android:id="@+id/relLayout1"
+        android:background="@drawable/white_border"
+        android:visibility="invisible"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="10dp"
+        android:elevation="10dp">
+        <ImageView
+            android:id="@+id/ic_magnify"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_marginLeft="10dp"
+            android:src="@drawable/ic_magnify"
+            android:layout_centerVertical="true"
+            android:contentDescription="TODO"/>
+        <EditText
+            android:textSize="15sp"
+            android:textColor="@color/black"
+            android:id="@+id/input_search"
+            android:background="@null"
+            android:paddingLeft="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:hint="Search here"
+            android:layout_toRightOf="@+id/ic_magnify"
+            android:layout_centerVertical="true"
+            android:inputType="text"
+            android:imeOptions="actionSearch"/>
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/ic_gps"
+        android:visibility="invisible"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="16dp"
+        android:src="@drawable/ic_gps"
+        android:scaleType="centerCrop"
+        android:layout_below="@+id/relLayout1"
+        android:layout_alignParentRight="true"
+        android:contentDescription="TODO"/>
+
+    <GridLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:rowCount="1"
+        android:columnCount="1">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardviewhome"
+            android:layout_margin="8dp"
+            android:foreground="?android:attr/selectableItemBackground"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            app:cardBackgroundColor="@color/maingreen"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="10dp">
+
+            <ImageView
+                android:id="@+id/maphome"
+                android:padding="5dp"
+                android:visibility="visible"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/ic_maphome"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:contentDescription="TODO"/>
+        </androidx.cardview.widget.CardView>
+    </GridLayout>
+</RelativeLayout>

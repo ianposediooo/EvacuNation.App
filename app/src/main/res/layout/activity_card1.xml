@@ -1,0 +1,715 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <RelativeLayout android:layout_width="match_parent" android:layout_height="match_parent" android:layout_marginLeft="20dp" android:layout_marginTop="20dp" android:layout_marginRight="20dp">
+
+            <TextView
+                android:layout_marginEnd="5dp"
+                android:id="@+id/txtdisaster"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:layout_toStartOf="@+id/logotop"
+                android:shadowDx="2"
+                android:shadowDy="2"
+                android:shadowRadius="3"
+                android:text="TYPHOON\nPREPAREDNESS\nTIPS"
+                android:textColor="?attr/colorOnSurface"
+                android:textSize="25sp"
+                android:textStyle="bold" />
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/logotop"
+                style="@style/Widget.Material3.CardView.Elevated"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                app:cardCornerRadius="10dp"
+                android:elevation="10dp">
+
+                <ImageView
+                    android:layout_width="120dp"
+                    android:layout_height="120dp"
+                    android:background="?attr/colorPrimary"
+                    android:src="@drawable/evaclogo_2" />
+
+            </com.google.android.material.card.MaterialCardView>
+
+        </RelativeLayout>
+        <GridLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="15dp" android:rowCount="1" android:columnCount="1" android:columnOrderPreserved="false" android:alignmentMode="alignMargins">
+            <com.google.android.material.card.MaterialCardView
+
+                android:id="@+id/typhooncardtop"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="12dp"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                app:cardCornerRadius="20dp"
+                app:cardElevation="6dp">
+
+                <LinearLayout
+                    android:layout_gravity="center"
+                    android:orientation="vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <pl.droidsonroids.gif.GifImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/haiyangif"
+                        android:adjustViewBounds="true" />
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginRight="20dp"
+                        android:layout_marginBottom="20dp"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginEnd="20dp">
+
+                        <TextView
+                            android:textColor="?attr/colorOnSurface"
+                            android:textSize="20sp"
+                            android:textStyle="bold"
+                            android:gravity="center_horizontal"
+                            android:layout_gravity="center"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="WHAT IS A TROPICAL CYCLONE?"
+                            android:textAlignment="center"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:elevation="10dp"
+                            android:text="Tropical cyclone characterized by large scale circulation of strong winds, low atmospheric pressure and heavy rains. It can cause flooding, storm surge, landslides and flash floods."
+                            android:textSize="14sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="3dp"
+                            android:elevation="10dp"
+                            android:text="Ang bagyo ay isang uri ng lagay ng panahon na nagdudulot ng malalakas at mabilis na hangin at pag-ulan na maaaring maging sanhi ng matitinding pagbaha, daluyong ng dagat at pagguho ng mga lupa."
+                            android:textSize="12sp"
+                            android:textStyle="italic" />
+                    </LinearLayout>
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="12dp"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                app:cardCornerRadius="20dp"
+                app:cardElevation="6dp">
+
+                <LinearLayout
+                    android:layout_gravity="center"
+                    android:orientation="vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:layout_gravity="center_horizontal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/signal"
+                        android:adjustViewBounds="true"/>
+
+                    <TextView
+                        android:textColor="?attr/colorOnSurface"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        android:gravity="center_horizontal"
+                        android:layout_gravity="center"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="STORM WARNING SYSTEM"
+                        android:textAlignment="center"
+                        android:elevation="6dp"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="3dp"
+                        android:layout_marginEnd="20dp"
+                        android:layout_marginRight="20dp"
+                        android:layout_marginBottom="20dp"
+                        android:elevation="10dp"
+                        android:text="The public storm warning system (PSWS) is as follows:\n\nPSWS No. 1: The first signal indicates that the area affected should expect intermittent rains within at least 36 hours. Winds of 30 kph to 60 kph should be expected, although it is unlikely that they will cause significant damage. As a precaution, classes in all public and private pre-schools are automatically suspended.\n\nPSWS No. 2: The second warning signal is raised in areas that will experience winds of 60 kph to 100 kph within at least 24 hours. Light to moderate damage is expected. Some trees may be uprooted and roofs blown away. People traveling by air and sea are cautioned, and disaster preparedness agencies should be alerting their respective communities. Classes from pre-school to high school are suspended.\n\nPSWS No. 3: When the third warning signal is raised, people are advised to seek shelter inside strong buildings, evacuate low-lying areas, and stay away from coasts and riverbanks as moderate to heavy damage is expected. Winds of 100 kph to 185 kph are expected within at least 18 hours. The winds could topple trees and destroy crops and houses made of light materials. Widespread disruption of electrical power and communication services is also expected. Classes at all levels are automatically suspended.\n\nPSWS No. 4: The fourth storm warning signal indicates that a very intense typhoon with winds of more than 185 kph may be expected within at least 12 hours. The typhoon is potentially very destructive. Large trees are expected to be uprooted and residential and institutional buildings could be severely damaged. Travels and outdoor activities should be cancelled.\n\nPSWS No. 5: This recently added storm warning signal is raised when a super typhoon will affect an area. Very powerful winds of more than 220 kph may be expected in at least 12 hours. This typhoon is extremely destructive or catastrophic to the community as almost total damage to structures is expected. Most residential and institutional buildings may be severely damaged, and only a few crops and trees will be left standing. Evacuation to safer shelters should be completed early as it may already be too late if it hasn&apos;t begun. The disaster coordinating councils concerned and other disaster response organizations should be fully responding to emergencies by this time or completely ready to immediately respond to the calamity."
+                        android:textSize="12sp" />
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+        </GridLayout>
+
+        <GridLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:rowCount="1"
+            android:columnCount="1">
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="12dp"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                app:cardCornerRadius="20dp"
+                app:cardElevation="6dp">
+
+                <TextView
+                    android:textColor="?attr/colorOnSurface"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:gravity="center_horizontal"
+                    android:layout_gravity="center"
+                    android:padding="10dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="CLASSIFICATIONS OF TROPICAL CYCLONES"
+                    android:textAlignment="center"/>
+
+            </com.google.android.material.card.MaterialCardView>
+
+        </GridLayout>
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <GridLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:rowCount="1"
+                android:columnCount="5"
+                android:columnOrderPreserved="false"
+                android:alignmentMode="alignMargins">
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="12dp"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    android:layout_rowWeight="1"
+                    android:layout_columnWeight="0"
+                    app:cardCornerRadius="20dp"
+                    app:cardElevation="6dp">
+
+                    <LinearLayout
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:padding="16dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <com.google.android.material.card.MaterialCardView
+                            android:layout_width="100dp"
+                            android:layout_height="wrap_content"
+                            app:cardBackgroundColor="#339900"
+                            app:cardCornerRadius="12dp"
+                            app:cardElevation="6dp">
+
+                            <LinearLayout
+                                android:orientation="vertical"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+                                <TextView
+                                    android:textSize="48sp"
+                                    android:textStyle="bold"
+                                    android:textColor="@color/white"
+                                    android:gravity="center"
+                                    android:layout_gravity="center"
+                                    android:paddingLeft="5dp"
+                                    android:paddingRight="5dp"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="61"
+                                    android:textAlignment="center"/>
+
+                                <TextView
+                                    android:textSize="14sp"
+                                    android:textColor="@color/white"
+                                    android:gravity="center"
+                                    android:layout_gravity="center"
+                                    android:padding="5dp"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="KPH or less"
+                                    android:textAlignment="center"/>
+
+                            </LinearLayout>
+                        </com.google.android.material.card.MaterialCardView>
+
+                        <TextView
+                            android:textSize="14sp"
+                            android:textStyle="bold"
+                            android:gravity="center_horizontal"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="12dp"
+                            android:text="Tropical\nDepression"
+                            android:textAlignment="center"/>
+
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="12dp"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    android:layout_rowWeight="1"
+                    android:layout_columnWeight="0"
+                    app:cardCornerRadius="20dp"
+                    app:cardElevation="6dp">
+
+                    <LinearLayout android:gravity="center" android:orientation="vertical" android:padding="16dp" android:layout_width="match_parent" android:layout_height="match_parent">
+                        <com.google.android.material.card.MaterialCardView
+                            android:layout_width="100dp"
+                            android:layout_height="wrap_content"
+                            app:cardBackgroundColor="#99cc33"
+                            app:cardCornerRadius="12dp"
+                            app:cardElevation="6dp">
+
+                            <LinearLayout
+                                android:orientation="vertical"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+                                <TextView
+                                    android:textSize="48sp"
+                                    android:textStyle="bold"
+                                    android:textColor="@color/white"
+                                    android:gravity="center"
+                                    android:layout_gravity="center"
+                                    android:paddingLeft="5dp"
+                                    android:paddingRight="5dp"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="62"
+                                    android:textAlignment="center"/>
+
+                                <TextView
+                                    android:textSize="14sp"
+                                    android:textColor="@color/white"
+                                    android:gravity="center"
+                                    android:layout_gravity="center"
+                                    android:padding="5dp"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="to 88 KPH"
+                                    android:textAlignment="center"/>
+
+                            </LinearLayout>
+                        </com.google.android.material.card.MaterialCardView>
+
+                        <TextView
+                            android:textSize="14sp"
+                            android:textStyle="bold"
+                            android:gravity="center_horizontal"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="12dp"
+                            android:text="Tropical\nStorm"
+                            android:textAlignment="center"/>
+
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="12dp"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    android:layout_rowWeight="1"
+                    android:layout_columnWeight="0"
+                    app:cardCornerRadius="20dp"
+                    app:cardElevation="6dp">
+
+                    <LinearLayout
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:padding="16dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <com.google.android.material.card.MaterialCardView
+                            android:layout_width="100dp"
+                            android:layout_height="wrap_content"
+                            app:cardBackgroundColor="#ffcc00"
+                            app:cardCornerRadius="12dp"
+                            app:cardElevation="6dp">
+
+                            <LinearLayout
+                                android:orientation="vertical"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+                                <TextView
+                                    android:textSize="48sp"
+                                    android:textStyle="bold"
+                                    android:textColor="@color/white"
+                                    android:gravity="center"
+                                    android:layout_gravity="center"
+                                    android:id="@+id/num"
+                                    android:paddingLeft="5dp"
+                                    android:paddingRight="5dp"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="89"
+                                    android:textAlignment="center"/>
+
+                                <TextView
+                                    android:textSize="14sp"
+                                    android:textColor="@color/white"
+                                    android:gravity="center"
+                                    android:layout_gravity="center"
+                                    android:padding="5dp"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="to 117 KPH"
+                                    android:textAlignment="center"/>
+
+                            </LinearLayout>
+                        </com.google.android.material.card.MaterialCardView>
+
+                        <TextView
+                            android:textSize="14sp"
+                            android:textStyle="bold"
+                            android:gravity="center_horizontal"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="12dp"
+                            android:text="Severe\nTropical Storm"
+                            android:textAlignment="center"/>
+
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="12dp"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    android:layout_rowWeight="1"
+                    android:layout_columnWeight="0"
+                    app:cardCornerRadius="20dp"
+                    app:cardElevation="6dp">
+
+                    <LinearLayout
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:padding="16dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <com.google.android.material.card.MaterialCardView
+                            android:layout_width="100dp"
+                            android:layout_height="wrap_content"
+                            app:cardBackgroundColor="#8b0000"
+                            app:cardCornerRadius="12dp"
+                            app:cardElevation="6dp">
+                            <LinearLayout
+                                android:orientation="vertical"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+                                <TextView
+                                    android:textSize="48sp"
+                                    android:textStyle="bold"
+                                    android:textColor="@color/white"
+                                    android:gravity="center"
+                                    android:layout_gravity="center"
+                                    android:paddingLeft="5dp"
+                                    android:paddingRight="5dp"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="118" android:textAlignment="center"/>
+
+                                <TextView
+                                    android:textSize="14sp"
+                                    android:textColor="@color/white"
+                                    android:gravity="center"
+                                    android:layout_gravity="center"
+                                    android:padding="5dp"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="to 220 KPH"
+                                    android:textAlignment="center"/>
+
+                            </LinearLayout>
+                        </com.google.android.material.card.MaterialCardView>
+
+                        <TextView
+                            android:textSize="14sp"
+                            android:textStyle="bold"
+                            android:gravity="center_horizontal"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="12dp"
+                            android:text="Typhoon\n"
+                            android:textAlignment="center"/>
+
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="12dp"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    android:layout_rowWeight="1"
+                    android:layout_columnWeight="0"
+                    app:cardCornerRadius="20dp"
+                    app:cardElevation="6dp">
+
+                    <LinearLayout
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:padding="16dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <com.google.android.material.card.MaterialCardView
+                            android:layout_width="100dp"
+                            android:layout_height="wrap_content"
+                            app:cardBackgroundColor="#ff0000"
+                            app:cardCornerRadius="12dp"
+                            app:cardElevation="6dp">
+
+                            <LinearLayout
+                                android:orientation="vertical"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+                                <TextView
+                                    android:textSize="48sp"
+                                    android:textStyle="bold"
+                                    android:textColor="@color/white"
+                                    android:gravity="center"
+                                    android:layout_gravity="center"
+                                    android:paddingLeft="5dp"
+                                    android:paddingRight="5dp"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="220"
+                                    android:textAlignment="center"/>
+
+                                <TextView
+                                    android:textSize="14sp"
+                                    android:textColor="@color/white"
+                                    android:gravity="center"
+                                    android:layout_gravity="center"
+                                    android:padding="5dp"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="&gt; than KPH"
+                                    android:textAlignment="center"/>
+
+                            </LinearLayout>
+                        </com.google.android.material.card.MaterialCardView>
+
+                        <TextView
+                            android:textSize="14sp"
+                            android:textStyle="bold"
+                            android:gravity="center_horizontal"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="12dp"
+                            android:text="Super\nTyphoon"
+                            android:textAlignment="center"/>
+
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+            </GridLayout>
+        </HorizontalScrollView>
+
+        <GridLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="15dp"
+            android:rowCount="1"
+            android:columnCount="1">
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="12dp"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                app:cardCornerRadius="20dp"
+                app:cardElevation="6dp"
+                >
+
+<!--                <pl.droidsonroids.gif.GifImageView-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="40dp"-->
+<!--                    android:src="@drawable/arrowright"-->
+<!--                    android:scaleType="fitXY"-->
+<!--                    android:adjustViewBounds="true"/>-->
+
+                <TextView
+                    android:textColor="?attr/colorOnSurface"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:gravity="center_horizontal"
+                    android:layout_gravity="center"
+                    android:padding="10dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="SWIPE RIGHT FOR MORE &apos;WHAT TO DO&apos; TIPS >>"
+                    android:textAlignment="center"
+                    android:elevation="6dp"
+                    />
+
+            </com.google.android.material.card.MaterialCardView>
+
+        </GridLayout>
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <GridLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:rowCount="1"
+                android:columnCount="3"
+                android:columnOrderPreserved="false"
+                android:alignmentMode="alignMargins">
+
+                <com.google.android.material.card.MaterialCardView
+                    style="@style/Widget.Material3.CardView.Elevated"
+                    android:layout_width="340dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="12dp"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    android:layout_rowWeight="1"
+                    android:layout_columnWeight="1"
+                    app:cardBackgroundColor="#f7b500"
+                    app:cardCornerRadius="20dp"
+                    app:cardElevation="6dp">
+
+                    <LinearLayout
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:padding="10dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:textSize="25sp"
+                            android:textStyle="bold"
+                            android:textColor="@color/white"
+                            android:gravity="center_horizontal"
+                            android:layout_gravity="center"
+                            android:padding="5dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="What to do before a Typhoon hits."
+                            android:shadowDx="2"
+                            android:shadowDy="2"
+                            android:shadowRadius="3"
+                            android:textAlignment="center"
+                            android:elevation="6dp"/>
+
+                        <LinearLayout android:orientation="horizontal" android:padding="10dp" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                            <ImageView android:layout_width="80dp" android:layout_height="80dp" android:src="@drawable/radio"/>
+                            <TextView android:textSize="15sp" android:textColor="@color/white" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Monitor the news for weather updates warnings and advisories (Alamin ang balita ukol sa panahon at mga anunsyong pangkaligtasan" android:layout_marginStart="10dp"/>
+                        </LinearLayout>
+                        <LinearLayout android:orientation="horizontal" android:padding="10dp" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                            <ImageView android:layout_width="80dp" android:layout_height="80dp" android:src="@drawable/checklist"/>
+                            <TextView android:textSize="15sp" android:textColor="@color/white" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10dp" android:text="Know the early warning and evacuation plan of the community (Alamin ang plano ng komunidad sa pagbibigay-babala at paglikas.)"/>
+                        </LinearLayout>
+                        <LinearLayout android:orientation="horizontal" android:padding="10dp" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                            <ImageView android:layout_width="80dp" android:layout_height="80dp" android:src="@drawable/homerepair"/>
+                            <TextView android:textSize="15sp" android:textColor="@color/white" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10dp" android:text="Check the integrity of your house and repair weak parts. (Surin ang bahay at kumpunihin ang mga mahina o sirang bahagi nito)"/>
+                        </LinearLayout>
+                        <LinearLayout android:orientation="horizontal" android:padding="10dp" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                            <ImageView android:layout_width="80dp" android:layout_height="80dp" android:src="@drawable/bag"/>
+                            <TextView android:textSize="15sp" android:textColor="@color/white" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10dp" android:text="Prepare your family&apos;s GO BAG containing items needed for survival. (Ihanda ang GO BAG na naglalaman ng mga Pangangaiangan ng pamilya.)"/>
+                        </LinearLayout>
+                        <LinearLayout android:orientation="horizontal" android:padding="10dp" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                            <ImageView android:layout_width="80dp" android:layout_height="80dp" android:src="@drawable/pets"/>
+                            <TextView android:textSize="15sp" android:textColor="@color/white" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10dp" android:text="Put livestock and pets in safe area or designated evacuation site for animals. (Ilikas ang mga alagang hayop sa ligtas na lugar.)"/>
+                        </LinearLayout>
+                        <LinearLayout android:orientation="horizontal" android:padding="10dp" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                            <ImageView android:layout_width="80dp" android:layout_height="80dp" android:src="@drawable/go"/>
+                            <TextView android:textSize="15sp" android:textColor="@color/white" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10dp" android:text="When notified, immediately go to the designated and nearest evacuation center. (Kapag inabisuhan ng kinauukulan, mabils na lumikas sa tinakda at pinaka malapit na evacuation center.)"/>
+                        </LinearLayout>
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.card.MaterialCardView style="@style/Widget.Material3.CardView.Elevated" android:id="@+id/card2" android:layout_width="340dp" android:layout_height="wrap_content" android:layout_margin="12dp" android:foreground="?android:attr/selectableItemBackground" android:layout_rowWeight="1" android:layout_columnWeight="1" app:cardBackgroundColor="#33a532" app:cardCornerRadius="20dp" app:cardElevation="6dp">
+                    <LinearLayout android:gravity="center" android:orientation="vertical" android:padding="10dp" android:layout_width="match_parent" android:layout_height="wrap_content">
+                        <TextView android:textSize="25sp" android:textStyle="bold" android:textColor="@color/white" android:gravity="center_horizontal" android:layout_gravity="center" android:padding="5dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="What to do DURING a Typhoon" android:shadowDx="2" android:shadowDy="2" android:shadowRadius="3" android:textAlignment="center" android:elevation="6dp"/>
+                        <LinearLayout android:orientation="horizontal" android:padding="10dp" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                            <ImageView android:layout_width="80dp" android:layout_height="80dp" android:src="@drawable/house"/>
+                            <TextView android:textSize="15sp" android:textColor="@color/white" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10dp" android:text="Stay calm. Stay indoors and tune in for latest news and weather updates (Manatling mahinahon. Manatili sa loob ng bahay o evacuation center at makinig sa pinakabagong balita at lagay ng panahon.)"/>
+                        </LinearLayout>
+                        <LinearLayout android:orientation="horizontal" android:padding="10dp" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                            <ImageView android:layout_width="80dp" android:layout_height="80dp" android:src="@drawable/lightsoff"/>
+                            <TextView android:textSize="15sp" android:textColor="@color/white" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10dp" android:text="Turn off main electrical switch and water valve. (Patayin ang main switch ng kuryente at valve ng tubig.)"/>
+                        </LinearLayout>
+                        <LinearLayout android:orientation="horizontal" android:padding="10dp" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                            <ImageView android:layout_width="80dp" android:layout_height="80dp" android:src="@drawable/flashlight"/>
+                            <TextView android:textSize="15sp" android:textColor="@color/white" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10dp" android:text="Use flashlight or emergency lamp. Be cautious in using candles and gas lamps. (Gumamt ng flashight o emergenoy lamp. Maging maingat sa paggamt ng kandia o gasera.)"/>
+                        </LinearLayout>
+                        <LinearLayout android:orientation="horizontal" android:padding="10dp" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                            <ImageView android:layout_width="80dp" android:layout_height="80dp" android:src="@drawable/awaywindow"/>
+                            <TextView android:textSize="15dp" android:textColor="@color/white" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10dp" android:text="Stay away from glass windows. (Umiwas sa mga salaming bintana.)"/>
+                        </LinearLayout>
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.card.MaterialCardView style="@style/Widget.Material3.CardView.Elevated" android:id="@+id/card3" android:layout_width="340dp" android:layout_height="match_parent" android:layout_margin="12dp" android:layout_rowWeight="1" android:layout_columnWeight="1" app:cardBackgroundColor="#cf142b" app:cardCornerRadius="20dp" app:cardElevation="6dp">
+                    <LinearLayout android:gravity="center" android:orientation="vertical" android:padding="10dp" android:layout_width="match_parent" android:layout_height="wrap_content">
+                        <TextView android:textSize="25sp" android:textStyle="bold" android:textColor="@color/white" android:gravity="center_horizontal" android:layout_gravity="center" android:padding="5dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="What to do AFTER a Typhoon hits" android:shadowDx="2" android:shadowDy="2" android:shadowRadius="3" android:textAlignment="center" android:elevation="6dp"/>
+                        <LinearLayout android:orientation="horizontal" android:padding="10dp" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                            <ImageView android:layout_width="80dp" android:layout_height="80dp" android:src="@drawable/gohome"/>
+                            <TextView android:textSize="15sp" android:textColor="@color/white" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10dp" android:text="Wait for authorities to declare that it is safe to return home. (Hintayin ang abiso ng kinauukulan kung ligtas ng bumalik sa tahanan.)"/>
+                        </LinearLayout>
+                        <LinearLayout android:orientation="horizontal" android:padding="10dp" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                            <ImageView android:layout_width="80dp" android:layout_height="80dp" android:src="@drawable/fallentree"/>
+                            <TextView android:textSize="15sp" android:textColor="@color/white" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10dp" android:text="Stay away from fallen trees, damaged structures and power lines (Umiwas sa mga natumbang puno, nasirang gusali at linya ng kuryente.)"/>
+                        </LinearLayout>
+                        <LinearLayout android:orientation="horizontal" android:padding="10dp" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                            <ImageView android:layout_width="80dp" android:layout_height="80dp" android:src="@drawable/sight"/>
+                            <TextView android:textSize="15sp" android:textColor="@color/white" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10dp" android:text="Do not go sightseeing as you may hinder the work of the emergency services. (Huag gumala upang hindi maabala ang emergency services.)"/>
+                        </LinearLayout>
+                        <LinearLayout android:orientation="horizontal" android:padding="10dp" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                            <ImageView android:layout_width="80dp" android:layout_height="80dp" android:src="@drawable/homerepair"/>
+                            <TextView android:textSize="15sp" android:textColor="@color/white" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10dp" android:text="Be cautious in checking and repairing the damaged parts of your house. (Maging maingat sa pogsasayos ng mga nasirang bahagi ng bahay.)"/>
+                        </LinearLayout>
+                        <LinearLayout android:orientation="horizontal" android:padding="10dp" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                            <ImageView android:layout_width="80dp" android:layout_height="80dp" android:src="@drawable/electric"/>
+                            <TextView android:textSize="15sp" android:textColor="@color/white" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10dp" android:text="Check for wet or submerged electrical outlets and appliances before turning on electricity. (Siguraduhing walang basa o nakababad na outet o kagamtan bago buksan ang lnva ng kuryente.)"/>
+                        </LinearLayout>
+                        <LinearLayout android:orientation="horizontal" android:padding="10dp" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                            <ImageView android:layout_width="80dp" android:layout_height="80dp" android:src="@drawable/trashcan"/>
+                            <TextView android:textSize="15sp" android:textColor="@color/white" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10dp" android:text="Throw away rainwater in cans, pots and tires to prevent breeding of mosquitoes. (Itapon ang mga naipong tubig sa lata, paso at gulong upang hindi pamahayan ng lamok.)"/>
+                        </LinearLayout>
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+            </GridLayout>
+        </HorizontalScrollView>
+    </LinearLayout>
+</ScrollView>

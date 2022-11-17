@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Users/Ian/Documents/EvacuNation2/app/src/main/res/layout-v21/activity_map.xml" value="0.12" />
+        <entry key="..\:/Users/Ian/Documents/EvacuNation2/app/src/main/res/layout-v21/hazard.xml" value="0.1" />
+        <entry key="..\:/Users/Ian/Documents/EvacuNation2/app/src/main/res/layout/activity_card1.xml" value="0.25" />
+        <entry key="..\:/Users/Ian/Documents/EvacuNation2/app/src/main/res/layout/activity_earthquake.xml" value="0.2" />
+        <entry key="..\:/Users/Ian/Documents/EvacuNation2/app/src/main/res/layout/activity_flood.xml" value="0.25" />
+        <entry key="..\:/Users/Ian/Documents/EvacuNation2/app/src/main/res/layout/activity_gobag.xml" value="0.25" />
+        <entry key="..\:/Users/Ian/Documents/EvacuNation2/app/src/main/res/layout/activity_landslide.xml" value="0.2" />
+        <entry key="..\:/Users/Ian/Documents/EvacuNation2/app/src/main/res/layout/activity_main.xml" value="0.2" />
+        <entry key="..\:/Users/Ian/Documents/EvacuNation2/app/src/main/res/layout/activity_map.xml" value="0.14" />
+        <entry key="..\:/Users/Ian/Documents/EvacuNation2/app/src/main/res/layout/activity_tsunami.xml" value="0.25" />
+        <entry key="..\:/Users/Ian/Documents/EvacuNation2/app/src/main/res/layout/disaster_2_layout.xml" value="0.16" />
+        <entry key="..\:/Users/Ian/Documents/EvacuNation2/app/src/main/res/layout/fragment_about.xml" value="0.33" />
+        <entry key="..\:/Users/Ian/Documents/EvacuNation2/app/src/main/res/layout/fragment_disaster.xml" value="0.12894736842105264" />
+        <entry key="..\:/Users/Ian/Documents/EvacuNation2/app/src/main/res/layout/fragment_earthquakesweb.xml" value="0.13" />
+        <entry key="..\:/Users/Ian/Documents/EvacuNation2/app/src/main/res/layout/fragment_home.xml" value="0.12894736842105264" />
+        <entry key="..\:/Users/Ian/Documents/EvacuNation2/app/src/main/res/layout/fragment_news.xml" value="0.12894736842105264" />
+        <entry key="..\:/Users/Ian/Documents/EvacuNation2/app/src/main/res/layout/fragment_tools.xml" value="0.12894736842105264" />
+        <entry key="..\:/Users/Ian/Documents/EvacuNation2/app/src/main/res/layout/fragment_toolsnew.xml" value="0.12" />
+        <entry key="..\:/Users/Ian/Documents/EvacuNation2/app/src/main/res/layout/fragment_weather.xml" value="0.12894736842105264" />
+        <entry key="..\:/Users/Ian/Documents/EvacuNation2/app/src/main/res/layout/hazard.xml" value="0.1" />
+        <entry key="..\:/Users/posed/OneDrive/Documents/EvacuNation2/app/src/main/res/drawable/backround_splash.xml" value="0.1" />
+        <entry key="..\:/Users/posed/OneDrive/Documents/EvacuNation2/app/src/main/res/drawable/callemergency.xml" value="0.153" />
+        <entry key="..\:/Users/posed/OneDrive/Documents/EvacuNation2/app/src/main/res/drawable/emergency.xml" value="0.153" />
+        <entry key="..\:/Users/posed/OneDrive/Documents/EvacuNation2/app/src/main/res/drawable/exitapp.xml" value="0.153" />
+        <entry key="..\:/Users/posed/OneDrive/Documents/EvacuNation2/app/src/main/res/drawable/flash_off.xml" value="0.153" />
+        <entry key="..\:/Users/posed/OneDrive/Documents/EvacuNation2/app/src/main/res/drawable/flash_on.xml" value="0.153" />
+        <entry key="..\:/Users/posed/OneDrive/Documents/EvacuNation2/app/src/main/res/drawable/flashofff.xml" value="0.153" />
+        <entry key="..\:/Users/posed/OneDrive/Documents/EvacuNation2/app/src/main/res/drawable/gpsss.xml" value="0.1355" />
+        <entry key="..\:/Users/posed/OneDrive/Documents/EvacuNation2/app/src/main/res/drawable/homeoutlined.xml" value="0.153" />
+        <entry key="..\:/Users/posed/OneDrive/Documents/EvacuNation2/app/src/main/res/drawable/ic_back.xml" value="0.1355" />
+        <entry key="..\:/Users/posed/OneDrive/Documents/EvacuNation2/app/src/main/res/drawable/listevac.xml" value="0.146" />
+        <entry key="..\:/Users/posed/OneDrive/Documents/EvacuNation2/app/src/main/res/drawable/locationoutlined.xml" value="0.153" />
+        <entry key="..\:/Users/posed/OneDrive/Documents/EvacuNation2/app/src/main/res/drawable/message.xml" value="0.153" />
+        <entry key="..\:/Users/posed/OneDrive/Documents/EvacuNation2/app/src/main/res/drawable/messageemergency.xml" value="0.153" />
+        <entry key="..\:/Users/posed/OneDrive/Documents/EvacuNation2/app/src/main/res/drawable/phoneblack.xml" value="0.153" />
+        <entry key="..\:/Users/posed/OneDrive/Documents/EvacuNation2/app/src/main/res/drawable/sunoutlined.xml" value="0.153" />
+        <entry key="..\:/Users/posed/OneDrive/Documents/EvacuNation2/app/src/main/res/drawable/tools_selector.xml" value="0.153" />
+        <entry key="..\:/Users/posed/OneDrive/Documents/EvacuNation2/app/src/main/res/drawable/toolsoutlined.xml" value="0.153" />
+        <entry key="..\:/Users/posed/OneDrive/Documents/EvacuNation2/app/src/main/res/drawable/warning.xml" value="0.153" />
+        <entry key="..\:/Users/posed/OneDrive/Documents/EvacuNation2/app/src/main/res/drawable/weather_selector.xml" value="0.153" />
+        <entry key="..\:/Users/posed/OneDrive/Documents/EvacuNation2/app/src/main/res/drawable/white_border.xml" value="0.121" />
+        <entry key="..\:/Users/posed/OneDrive/Documents/EvacuNation2/app/src/main/res/font/fonts.xml" value="0.21015625" />
+        <entry key="..\:/Users/posed/OneDrive/Documents/EvacuNation2/app/src/main/res/layout-v21/activity_map.xml" value="0.2" />
+        <entry key="..\:/Users/posed/OneDrive/Documents/EvacuNation2/app/src/main/res/layout-v21/hazard.xml" value="0.2" />
+        <entry key="..\:/Users/posed/OneDrive/Documents/EvacuNation2/app/src/main/res/layout/activity_card1.xml" value="0.17872161480235493" />
+        <entry key="..\:/Users/posed/OneDrive/Documents/EvacuNation2/app/src/main/res/layout/activity_covid.xml" value="0.2" />
+        <entry key="..\:/Users/posed/OneDrive/Documents/EvacuNation2/app/src/main/res/layout/activity_earthquake.xml" value="0.264" />
+        <entry key="..\:/Users/posed/OneDrive/Documents/EvacuNation2/app/src/main/res/layout/activity_flood.xml" value="0.18388157894736842" />
+        <entry key="..\:/Users/posed/OneDrive/Documents/EvacuNation2/app/src/main/res/layout/activity_gobag.xml" value="0.3516483516483517" />
+        <entry key="..\:/Users/posed/OneDrive/Documents/EvacuNation2/app/src/main/res/layout/activity_landslide.xml" value="0.18388157894736842" />
+        <entry key="..\:/Users/posed/OneDrive/Documents/EvacuNation2/app/src/main/res/layout/activity_lists.xml" value="0.176" />
+        <entry key="..\:/Users/posed/OneDrive/Documents/EvacuNation2/app/src/main/res/layout/activity_main.xml" value="0.264" />
+        <entry key="..\:/Users/posed/OneDrive/Documents/EvacuNation2/app/src/main/res/layout/activity_map.xml" value="0.15789473684210525" />
+        <entry key="..\:/Users/posed/OneDrive/Documents/EvacuNation2/app/src/main/res/layout/activity_safestepsph.xml" value="0.2600896860986547" />
+        <entry key="..\:/Users/posed/OneDrive/Documents/EvacuNation2/app/src/main/res/layout/activity_tsunami.xml" value="0.18162393162393162" />
+        <entry key="..\:/Users/posed/OneDrive/Documents/EvacuNation2/app/src/main/res/layout/disaster_2_layout.xml" value="0.136" />
+        <entry key="..\:/Users/posed/OneDrive/Documents/EvacuNation2/app/src/main/res/layout/fragment_about.xml" value="0.264" />
+        <entry key="..\:/Users/posed/OneDrive/Documents/EvacuNation2/app/src/main/res/layout/fragment_disaster.xml" value="0.18388157894736842" />
+        <entry key="..\:/Users/posed/OneDrive/Documents/EvacuNation2/app/src/main/res/layout/fragment_earthquakesweb.xml" value="0.15789473684210525" />
+        <entry key="..\:/Users/posed/OneDrive/Documents/EvacuNation2/app/src/main/res/layout/fragment_home.xml" value="0.18388157894736842" />
+        <entry key="..\:/Users/posed/OneDrive/Documents/EvacuNation2/app/src/main/res/layout/fragment_news.xml" value="0.264" />
+        <entry key="..\:/Users/posed/OneDrive/Documents/EvacuNation2/app/src/main/res/layout/fragment_tools.xml" value="0.18162393162393162" />
+        <entry key="..\:/Users/posed/OneDrive/Documents/EvacuNation2/app/src/main/res/layout/fragment_toolsnew.xml" value="0.264" />
+        <entry key="..\:/Users/posed/OneDrive/Documents/EvacuNation2/app/src/main/res/layout/fragment_weather.xml" value="0.264" />
+        <entry key="..\:/Users/posed/OneDrive/Documents/EvacuNation2/app/src/main/res/layout/hazard.xml" value="0.18388157894736842" />
+        <entry key="..\:/Users/posed/OneDrive/Documents/EvacuNation2/app/src/main/res/menu/bottom_menu.xml" value="0.15789473684210525" />
+        <entry key="..\:/Users/posed/OneDrive/Documents/EvacuNation2/app/src/main/res/mipmap-anydpi-v26/ic_banner.xml" value="0.1355" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="11" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>

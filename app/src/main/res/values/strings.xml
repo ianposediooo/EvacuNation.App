@@ -1,0 +1,22 @@
+<resources>
+    <string name="google_maps_API_key">AIzaSyCtJEjulzAOP7M9Pnv4484czqZixCa1TPI</string>
+    <string name="app_name">EvacuNation</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="tools_fragment">Tools Fragment</string>
+    <string name="textview">TextView</string>
+    <string name="weather_fragment">weather fragment</string>
+    <string name="home">Home</string>
+    <string name="map">Map</string>
+    <string name="weather">Weather</string>
+    <string name="tools">Tools</string>
+    <string name="disaster_tips">Disaster Tips</string>
+    <string name="news">News</string>
+    <string name="about">About</string>
+    <string name="evacunation">EvacuNation</string>
+    <string name="disaster_preparedness_and_evacuation_locator_x0a_mobile_application">Disaster Preparedness and Evacuation Locator\n Mobile Application</string>
+    <string name="developed_by_x0a_ian_posedio">Developed by:\nIan Posedio</string>
+    <string name="evac_centers">evac centers</string>
+    <string name="logo">logo</string>
+    <string name="version" />
+</resources>

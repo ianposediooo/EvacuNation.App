@@ -1,0 +1,485 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <RelativeLayout android:layout_width="match_parent" android:layout_height="match_parent" android:layout_marginLeft="20dp" android:layout_marginTop="20dp" android:layout_marginRight="20dp">
+
+            <TextView
+                android:id="@+id/txtdisaster"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="5dp"
+                android:layout_toStartOf="@+id/logotop"
+                android:shadowDx="2"
+                android:shadowDy="2"
+                android:shadowRadius="3"
+                android:text="ABOUT"
+                android:textColor="?attr/colorOnSurface"
+                android:textSize="25sp"
+                android:textStyle="bold" />
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/logotop"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                app:cardCornerRadius="10dp"
+                android:elevation="10dp">
+
+                <ImageView
+                    android:layout_width="120dp"
+                    android:layout_height="120dp"
+                    android:background="?attr/colorPrimary"
+                    android:src="@drawable/evaclogo_2" />
+
+            </androidx.cardview.widget.CardView>
+        </RelativeLayout>
+        <GridLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="15dp" android:rowCount="1" android:columnCount="1" android:columnOrderPreserved="false" android:alignmentMode="alignMargins">
+            <androidx.cardview.widget.CardView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="12dp"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                app:cardBackgroundColor="?attr/colorPrimary"
+                app:cardCornerRadius="20dp"
+                app:cardElevation="10dp">
+
+                <LinearLayout android:layout_gravity="center" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent">
+                    <ImageView android:layout_gravity="center" android:padding="15dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/evaclogo_2" android:adjustViewBounds="true"/>
+                    <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_marginLeft="20dp" android:layout_marginTop="10dp" android:layout_marginRight="20dp" android:layout_marginBottom="20dp" android:layout_marginStart="20dp" android:layout_marginEnd="20dp">
+                        <TextView
+                            android:textSize="20sp"
+                            android:textStyle="bold"
+                            android:textColor="?attr/colorOnPrimary"
+                            android:gravity="center_horizontal"
+                            android:layout_gravity="center"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/app_name"
+                            android:lines="1"
+                            android:textAlignment="center"/>
+
+                        <TextView
+                            android:textColor="?attr/colorOnPrimary"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:elevation="10dp"
+                            android:text="A Disaster Preparedness and Evacuation Center Locator Mobile Application"
+                            android:textAlignment="center"
+                            android:textSize="14sp" />
+
+                        <TextView
+                            android:textColor="?attr/colorOnPrimary"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="3dp"
+                            android:elevation="10dp"
+                            android:text="Isang Mobile Application para sa Paghahanda sa Sakuna at Evacuation Center Locator"
+                            android:textAlignment="center"
+                            android:textSize="12sp"
+                            android:textStyle="italic" />
+
+<!--                        <TextView-->
+<!--                            android:layout_marginTop="10dp"-->
+<!--                            android:textColor="?attr/colorOnPrimary"-->
+<!--                            android:layout_width="match_parent"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:layout_gravity="center"-->
+<!--                            android:elevation="10dp"-->
+<!--                            android:text="BS Information Technology\n&quot;Capstone Project of the Year 2022&quot;"-->
+<!--                            android:textAlignment="center"-->
+<!--                            android:textSize="14sp" />-->
+                        <TextView
+                            android:textSize="20sp"
+                            android:textStyle="bold"
+                            android:textColor="?attr/colorOnPrimary" android:gravity="center_horizontal" android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="10dp" android:text="App Purpose" android:lines="1" android:textAlignment="center"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:elevation="10dp"
+                            android:text="The EvacuNation APP will be a new tool to aid the Philippines’ countrymen in locating evacuation centers in times of disasters."
+                            android:textAlignment="center"
+                            android:textColor="?attr/colorOnPrimary"
+                            android:textSize="14sp" />
+                        <TextView
+                            android:textSize="20sp"
+                        android:textStyle="bold"
+                        android:textColor="?attr/colorOnPrimary"
+                        android:gravity="center_horizontal"
+                        android:layout_gravity="center"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="App Version"
+                        android:lines="1"
+                        android:textAlignment="center"/>
+
+                        <TextView
+                            android:id="@+id/version"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:elevation="10dp"
+                            android:textAlignment="center"
+                            android:textColor="?attr/colorOnPrimary"
+                            android:textSize="14sp"
+                            android:textStyle="bold" />
+                        <TextView
+                            android:textSize="14sp"
+                            android:textColor="?attr/colorOnPrimary"
+                            android:layout_gravity="center"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="If you have comments, suggestions or feedback. \n E-mail it at posedioian@gmail.com"
+                            android:textAlignment="center"
+                            android:elevation="10dp"/>
+
+                        <TextView
+                            android:textSize="20sp"
+                            android:textStyle="bold"
+                            android:textColor="?attr/colorOnPrimary"
+                            android:gravity="center_horizontal"
+                            android:layout_gravity="center"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:text="App Theme"
+                            android:lines="1"
+                            android:textAlignment="center"/>
+
+                        <HorizontalScrollView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+                        <com.google.android.material.chip.ChipGroup
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            app:singleLine="true">
+
+                            <com.google.android.material.chip.Chip
+                                style="@style/Widget.Material3.Chip.Assist.Elevated"
+                                android:id="@+id/lightmode"
+                                app:chipIcon="@drawable/lightmode"
+                                app:chipIconTint="?attr/colorOnSurface"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Light Mode">
+
+                            </com.google.android.material.chip.Chip>
+
+                            <com.google.android.material.chip.Chip
+                                style="@style/Widget.Material3.Chip.Assist.Elevated"
+                                android:id="@+id/darkmode"
+                                app:chipIcon="@drawable/darkmode"
+                                app:chipIconTint="?attr/colorOnSurface"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Dark Mode">
+
+                            </com.google.android.material.chip.Chip>
+
+                            <com.google.android.material.chip.Chip
+                                style="@style/Widget.Material3.Chip.Assist.Elevated"
+                                android:id="@+id/followsystem"
+                                app:chipIcon="@drawable/smartphone"
+                                app:chipIconTint="?attr/colorOnSurface"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Follow System">
+
+                            </com.google.android.material.chip.Chip>
+
+                        </com.google.android.material.chip.ChipGroup>
+
+                        </HorizontalScrollView>
+
+                        <TextView
+                            android:textSize="20sp"
+                            android:textStyle="bold"
+                            android:textColor="?attr/colorOnPrimary"
+                            android:gravity="center_horizontal"
+                            android:layout_gravity="center"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:text="Share EvacuNation"
+                            android:lines="1"
+                            android:textAlignment="center"/>
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp">
+
+                            <com.google.android.material.button.MaterialButton
+                                android:id="@+id/shareapp"
+                                style="@style/Widget.Material3.Button.ElevatedButton.Icon"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_centerHorizontal="true"
+                                android:text="Share App"
+                                android:textColor="?attr/colorOnSurface"
+                                android:textStyle="bold"
+                                app:icon="@drawable/share"
+                                app:iconGravity="textStart"
+                                app:iconTint="?attr/colorOnSurface">
+
+                            </com.google.android.material.button.MaterialButton>
+
+                        </RelativeLayout>
+
+                    </LinearLayout>
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <com.google.android.material.card.MaterialCardView
+                style="@style/Widget.Material3.CardView.Elevated"
+                app:cardBackgroundColor="?attr/colorTertiary"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_margin="12dp"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                app:cardCornerRadius="20dp"
+                app:cardElevation="10dp">
+                <TextView
+                    android:textColor="?attr/colorOnTertiary"
+                    android:textSize="18dp"
+                    android:textStyle="bold"
+                    android:gravity="center_horizontal"
+                    android:layout_gravity="center"
+                    android:padding="10dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="ABOUT US"
+                    android:shadowDx="2"
+                    android:shadowDy="2"
+                    android:shadowRadius="3"
+                    android:textAlignment="center"
+                    android:elevation="6dp"/>
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                style="@style/Widget.Material3.CardView.Elevated"
+                app:cardBackgroundColor="?attr/colorTertiary"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="12dp"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                app:cardCornerRadius="20dp"
+                app:cardElevation="10dp">
+
+                <LinearLayout android:layout_gravity="center" android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                    <ImageView android:padding="40dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/me" android:adjustViewBounds="true"/>
+                    <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_marginLeft="20dp" android:layout_marginTop="10dp" android:layout_marginRight="20dp" android:layout_marginBottom="20dp" android:layout_marginStart="20dp" android:layout_marginEnd="20dp">
+                        <TextView
+                            android:textColor="?attr/colorOnTertiary" android:textSize="20sp" android:textStyle="bold" android:gravity="center_horizontal" android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="IAN BALDWIN A. POSEDIO" android:lines="1" android:textAlignment="center"/>
+                        <TextView android:textColor="?attr/colorOnTertiary" android:textSize="14sp" android:textStyle="bold" android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Information Technology Student at\nLaguna State Polytechnic University" android:textAlignment="center" android:elevation="10dp"/>
+                        <TextView android:textColor="?attr/colorOnTertiary" android:textSize="12sp" android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="3dp" android:text="App Developer\nposedioian@gmail.com" android:textAlignment="center" android:elevation="10dp"/>
+                    </LinearLayout>
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+            <com.google.android.material.card.MaterialCardView
+                style="@style/Widget.Material3.CardView.Elevated"
+                app:cardBackgroundColor="?attr/colorTertiary"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="12dp"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                app:cardCornerRadius="20dp"
+                app:cardElevation="10dp">
+                <LinearLayout android:layout_gravity="center" android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                    <ImageView android:padding="40dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/micell" android:adjustViewBounds="true"/>
+                    <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_marginLeft="20dp" android:layout_marginTop="10dp" android:layout_marginRight="20dp" android:layout_marginBottom="20dp" android:layout_marginStart="20dp" android:layout_marginEnd="20dp">
+                        <TextView android:textColor="?attr/colorOnTertiary" android:textSize="20sp" android:textStyle="bold" android:gravity="center_horizontal" android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="JHAY MICELL G. PANOPIO" android:lines="1" android:textAlignment="center"/>
+                        <TextView android:textColor="?attr/colorOnTertiary" android:textSize="14sp" android:textStyle="bold"  android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Information Technology Student at\nLaguna State Polytechnic University" android:textAlignment="center" android:elevation="10dp"/>
+                        <TextView android:textColor="?attr/colorOnTertiary" android:textSize="12sp" android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="3dp" android:text="Documentation and Researcher\njhaymicellp@gmail.com" android:textAlignment="center" android:elevation="10dp"/>
+                    </LinearLayout>
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                style="@style/Widget.Material3.CardView.Elevated"
+                app:cardBackgroundColor="?attr/colorTertiary"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="12dp"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                app:cardCornerRadius="20dp"
+                app:cardElevation="10dp">
+
+                <LinearLayout android:layout_gravity="center" android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                    <ImageView android:padding="40dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/querara" android:adjustViewBounds="true"/>
+                    <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_marginLeft="20dp" android:layout_marginTop="10dp" android:layout_marginRight="20dp" android:layout_marginBottom="20dp" android:layout_marginStart="20dp" android:layout_marginEnd="20dp">
+                        <TextView
+                            android:textColor="?attr/colorOnTertiary"
+                            android:textSize="20sp"
+                            android:textStyle="bold"
+                            android:gravity="center_horizontal"
+                            android:layout_gravity="center"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="QUERARA A. VELASCO"
+                            android:lines="1"
+                            android:textAlignment="center"/>
+                        <TextView android:textColor="?attr/colorOnTertiary" android:textSize="14sp" android:textStyle="bold" android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Information Technology Student at\nLaguna State Polytechnic University" android:textAlignment="center" android:elevation="10dp"/>
+                        <TextView android:textColor="?attr/colorOnTertiary" android:textSize="12sp" android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="3dp" android:text="Documentation and Researcher\nvelascoquerara@gmail.com" android:textAlignment="center" android:elevation="10dp"/>
+                    </LinearLayout>
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+        </GridLayout>
+        <GridLayout android:layout_width="match_parent" android:layout_height="match_parent" android:rowCount="1" android:columnCount="1">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="12dp"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                app:cardBackgroundColor="?attr/colorSecondary"
+                app:cardCornerRadius="20dp"
+                app:cardElevation="10dp">
+
+                <TextView
+                    android:textSize="18dp"
+                    android:textStyle="bold"
+                    android:textColor="@color/white"
+                    android:gravity="center_horizontal"
+                    android:layout_gravity="center"
+                    android:padding="10dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="CREDITS"
+                    android:textAlignment="center"
+                    android:elevation="10dp"/>
+            </androidx.cardview.widget.CardView>
+
+        </GridLayout>
+
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <GridLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:rowCount="1"
+                android:columnCount="3"
+                android:columnOrderPreserved="false"
+                android:alignmentMode="alignMargins">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="12dp"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    android:layout_rowWeight="1"
+                    android:layout_columnWeight="0"
+                    app:cardBackgroundColor="?attr/colorSecondary"
+                    app:cardCornerRadius="20dp"
+                    app:cardElevation="10dp">
+
+                    <LinearLayout
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+                        <ImageView android:padding="15dp" android:layout_width="wrap_content" android:layout_height="150dp" android:src="@drawable/civildefense" android:adjustViewBounds="true"/>
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+                <androidx.cardview.widget.CardView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="12dp"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    android:layout_rowWeight="1"
+                    android:layout_columnWeight="0"
+                    app:cardBackgroundColor="?attr/colorSecondary"
+                    app:cardCornerRadius="20dp"
+                    app:cardElevation="10dp">
+
+                    <LinearLayout android:gravity="center" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent">
+                        <ImageView android:layout_width="wrap_content" android:layout_height="150dp" android:src="@drawable/nddrmc" android:adjustViewBounds="true"/>
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+                <androidx.cardview.widget.CardView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="12dp"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    android:layout_rowWeight="1"
+                    android:layout_columnWeight="0"
+                    app:cardBackgroundColor="?attr/colorSecondary"
+                    app:cardCornerRadius="20dp"
+                    app:cardElevation="10dp">
+
+                    <LinearLayout android:gravity="center" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent">
+                        <ImageView android:padding="15dp" android:layout_width="wrap_content" android:layout_height="150dp" android:src="@drawable/lspu" android:adjustViewBounds="true"/>
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+                <androidx.cardview.widget.CardView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="12dp"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    android:layout_rowWeight="1"
+                    android:layout_columnWeight="0"
+                    app:cardBackgroundColor="?attr/colorSecondary"
+                    app:cardCornerRadius="20dp"
+                    app:cardElevation="10dp">
+
+                    <LinearLayout android:gravity="center" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent">
+                        <ImageView android:padding="15dp" android:layout_width="wrap_content" android:layout_height="150dp" android:src="@drawable/ccs" android:adjustViewBounds="true"/>
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+                <androidx.cardview.widget.CardView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="12dp"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    android:layout_rowWeight="1"
+                    android:layout_columnWeight="0"
+                    app:cardBackgroundColor="?attr/colorSecondary"
+                    app:cardCornerRadius="20dp"
+                    app:cardElevation="10dp">
+
+                    <LinearLayout android:gravity="center" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent">
+                        <ImageView android:padding="15dp" android:layout_width="wrap_content" android:layout_height="150dp" android:src="@drawable/google" android:adjustViewBounds="true"/>
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+                <androidx.cardview.widget.CardView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="12dp"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    android:layout_rowWeight="1"
+                    android:layout_columnWeight="0"
+                    app:cardBackgroundColor="?attr/colorSecondary"
+                    app:cardCornerRadius="20dp"
+                    app:cardElevation="10dp">
+
+                    <LinearLayout android:gravity="center" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent">
+                        <ImageView android:padding="15dp" android:layout_width="wrap_content" android:layout_height="150dp" android:src="@drawable/windy" android:adjustViewBounds="true"/>
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+            </GridLayout>
+        </HorizontalScrollView>
+    </LinearLayout>
+</ScrollView>

@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent">
+        <RelativeLayout android:layout_width="match_parent" android:layout_height="match_parent" android:layout_marginLeft="20dp" android:layout_marginTop="20dp" android:layout_marginRight="20dp">
+
+            <TextView
+                android:layout_marginEnd="5dp"
+                android:layout_alignParentStart="true"
+                android:layout_toStartOf="@+id/logotop"
+                android:id="@+id/txtdisaster"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:shadowDx="2"
+                android:shadowDy="2"
+                android:shadowRadius="3"
+                android:text="LANDSLIDE\nPREPAREDNESS\nTIPS"
+                android:textColor="?attr/colorOnSurface"
+                android:textSize="25sp"
+                android:textStyle="bold" />
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/logotop"
+                style="@style/Widget.Material3.CardView.Elevated"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                app:cardCornerRadius="10dp"
+                android:elevation="10dp">
+
+                <ImageView
+                    android:layout_width="120dp"
+                    android:layout_height="120dp"
+                    android:background="?attr/colorPrimary"
+                    android:src="@drawable/evaclogo_2" />
+
+            </com.google.android.material.card.MaterialCardView>
+        </RelativeLayout>
+        <GridLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="15dp" android:rowCount="1" android:columnCount="1" android:columnOrderPreserved="false" android:alignmentMode="alignMargins">
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/typhooncardtop"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="12dp"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                app:cardCornerRadius="20dp"
+                app:cardElevation="6dp">
+
+                <LinearLayout android:layout_gravity="center" android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                    <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/landslideimage" android:adjustViewBounds="true"/>
+                    <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_marginLeft="20dp" android:layout_marginTop="10dp" android:layout_marginRight="20dp" android:layout_marginBottom="20dp" android:layout_marginStart="20dp" android:layout_marginEnd="20dp">
+                        <TextView
+                            android:textColor="?attr/colorOnSurface"
+                            android:textSize="20sp"
+                            android:textStyle="bold"
+                            android:gravity="center_horizontal"
+                            android:layout_gravity="center"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="LANDSLIDES"
+                            android:lines="1"
+                            android:textAlignment="center"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:elevation="10dp"
+                            android:text="The sliding down of a mass of earth or rock from a mountain or cliff."
+                            android:textSize="14sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="3dp"
+                            android:elevation="10dp"
+                            android:text="Ang pag-slide pababa ng isang masa ng lupa o bato mula sa isang bundok o bangin."
+                            android:textSize="12sp"
+                            android:textStyle="italic" />
+                    </LinearLayout>
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:visibility="visible"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="12dp"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                app:cardCornerRadius="20dp"
+                app:cardElevation="6dp">
+
+                <LinearLayout android:layout_gravity="center" android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                    <TextView
+                        android:textColor="?attr/colorOnSurface"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        android:gravity="center_horizontal"
+                        android:layout_gravity="center"
+                        android:padding="5dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginRight="20dp"
+                        android:text="LANDSLIDE WARNING SIGNS"
+                        android:textAlignment="center"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginEnd="20dp"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="8dp"
+                        android:elevation="10dp"
+                        android:paddingLeft="20dp"
+                        android:paddingRight="20dp"
+                        android:paddingBottom="20dp"
+                        android:text="1. Springs, seeps, or saturated ground in areas that have not typically been wet before. New cracks or unusual bulges in the ground, street pavements or sidewalks.\n2. Soil moving away from foundations.\n3. Ancillary structures such as decks and patios tilting and/or moving relative to the main house.\n4. Tilting or cracking of concrete floors and foundations.\n5. Broken water lines and other underground utilities.\n6. Leaning telephone poles, trees, retaining walls or fences.\n7. Offset fence lines.\n8. Sunken or down-dropped road beds.\n9. Rapid increase in creek water levels, possibly accompanied by increased turbidity (soil content).\n10. Sudden decrease in creek water levels though rain is still falling or just recently stopped.\n11. Sticking doors and windows, and visible open spaces indicating jambs and frames out of plumb.\n12. A faint rumbling sound that increases in volume is noticeable as the landslide nears.\n13. Unusual sounds, such as trees cracking or boulders knocking together, might indicate moving debris."
+                        android:textSize="14sp" />
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+        </GridLayout>
+        <GridLayout android:layout_width="match_parent" android:layout_height="match_parent" android:layout_marginTop="15dp" android:rowCount="1" android:columnCount="1">
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="12dp"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                app:cardCornerRadius="20dp"
+                app:cardElevation="6dp"
+                >
+
+                <!--                <pl.droidsonroids.gif.GifImageView-->
+                <!--                    android:layout_width="match_parent"-->
+                <!--                    android:layout_height="40dp"-->
+                <!--                    android:src="@drawable/arrowright"-->
+                <!--                    android:scaleType="fitXY"-->
+                <!--                    android:adjustViewBounds="true"/>-->
+
+                <TextView
+                    android:textColor="?attr/colorOnSurface"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:gravity="center_horizontal"
+                    android:layout_gravity="center"
+                    android:padding="10dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="SWIPE RIGHT FOR MORE &apos;WHAT TO DO&apos; TIPS >>"
+                    android:textAlignment="center"
+                    android:elevation="6dp"
+                    />
+
+            </com.google.android.material.card.MaterialCardView>
+        </GridLayout>
+        <HorizontalScrollView android:layout_width="match_parent" android:layout_height="wrap_content">
+            <GridLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:rowCount="1" android:columnCount="3" android:columnOrderPreserved="false" android:alignmentMode="alignMargins">
+                <com.google.android.material.card.MaterialCardView style="@style/Widget.Material3.CardView.Elevated" android:layout_width="340dp" android:layout_height="wrap_content" android:layout_margin="12dp" android:foreground="?android:attr/selectableItemBackground" android:layout_rowWeight="1" android:layout_columnWeight="1" app:cardBackgroundColor="#f7b500" app:cardCornerRadius="20dp" app:cardElevation="6dp">
+                    <LinearLayout android:gravity="center" android:orientation="vertical" android:padding="10dp" android:layout_width="match_parent" android:layout_height="wrap_content">
+                        <TextView android:textSize="25dp" android:textStyle="bold" android:textColor="@color/white" android:gravity="center_horizontal" android:layout_gravity="center" android:padding="5dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="What to do BEFORE a Landslide" android:textAlignment="center" android:elevation="6dp"/>
+                        <LinearLayout android:orientation="horizontal" android:padding="10dp" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                            <ImageView android:layout_width="80dp" android:layout_height="80dp" android:src="@drawable/slopehouse"/>
+                            <TextView android:textSize="15dp" android:textColor="@color/white" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10dp" android:text="Do not build near steep slopes, close to mountain edges, near drainage ways, or natural erosion valleys. (Huwag magtayo malapit sa matarik na mga dalisdis, malapit sa mga gilid ng bundok, malapit sa mga daanan ng paagusan, o natural na mga lambak ng pagguho.)"/>
+                        </LinearLayout>
+                        <LinearLayout android:orientation="horizontal" android:padding="10dp" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                            <ImageView android:layout_width="80dp" android:layout_height="80dp" android:src="@drawable/checklist"/>
+                            <TextView android:textSize="15dp" android:textColor="@color/white" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10dp" android:text="Learn about the emergency-response and evacuation plans for your area. Develop your own emergency plan for your family or business. (Alamin ang tungkol sa emergency-response at evacuation plan para sa iyong lugar. Bumuo ng sarili mong planong pang-emerhensiya para sa iyong pamilya o negosyo.)"/>
+                        </LinearLayout>
+                        <LinearLayout android:orientation="horizontal" android:padding="10dp" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                            <ImageView android:layout_width="80dp" android:layout_height="80dp" android:src="@drawable/homerepair"/>
+                            <TextView android:textSize="15dp" android:textColor="@color/white" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10dp" android:text="Check your house and have it repaired if necessary. (Sigraduhing matibay ang bahay at ipakumpuni ang mga sirang bahagi nito.)"/>
+                        </LinearLayout>
+                        <LinearLayout android:orientation="horizontal" android:padding="10dp" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                            <ImageView android:layout_width="80dp" android:layout_height="80dp" android:src="@drawable/bag"/>
+                            <TextView android:textSize="15dp" android:textColor="@color/white" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10dp" android:text="Prepare your family&apos;s GO BAG containing items needed for survival. (Ihanda ang GO BAG na naglalaman ng mga Pangangaiangan ng pamilya.)"/>
+                        </LinearLayout>
+                        <LinearLayout android:orientation="horizontal" android:padding="10dp" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                            <ImageView android:layout_width="80dp" android:layout_height="80dp" android:src="@drawable/fix"/>
+                            <TextView android:textSize="15dp" android:textColor="@color/white" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10dp" android:text="Secure heavy furniture and hanging objects. (Siguraduhing ligtas ang pagkakalagay ng mga mabibigat at mga nakabiting bagay.)"/>
+                        </LinearLayout>
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+                <com.google.android.material.card.MaterialCardView style="@style/Widget.Material3.CardView.Elevated" android:id="@+id/card2" android:layout_width="340dp" android:layout_height="wrap_content" android:layout_margin="12dp" android:foreground="?android:attr/selectableItemBackground" android:layout_rowWeight="1" android:layout_columnWeight="1" app:cardBackgroundColor="#33a532" app:cardCornerRadius="20dp" app:cardElevation="6dp">
+                    <LinearLayout android:gravity="center" android:orientation="vertical" android:padding="10dp" android:layout_width="match_parent" android:layout_height="wrap_content">
+                        <TextView android:textSize="25dp" android:textStyle="bold" android:textColor="@color/white" android:gravity="center_horizontal" android:layout_gravity="center" android:padding="5dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="What to do DURING a Landlide" android:textAlignment="center" android:elevation="6dp"/>
+                        <LinearLayout android:orientation="horizontal" android:padding="10dp" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                            <ImageView android:layout_width="80dp" android:layout_height="80dp" android:src="@drawable/radio"/>
+                            <TextView android:textSize="15dp" android:textColor="@color/white" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10dp" android:text="Listen to local news stations on a battery-powered radio for warnings. (Makinig sa mga lokal na istasyon ng balita sa radyong pinapagana ng baterya para sa mga babala.)"/>
+                        </LinearLayout>
+                        <LinearLayout android:orientation="horizontal" android:padding="10dp" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                            <ImageView android:layout_width="80dp" android:layout_height="80dp" android:src="@drawable/announcement" android:backgroundTint="@color/black" android:backgroundTintMode="multiply"/>
+                            <TextView android:textSize="15dp" android:textColor="@color/white" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10dp" android:text="Heed all warnings and evacuation notices. (Pakinggan ang lahat ng babala at abiso sa paglikas.)"/>
+                        </LinearLayout>
+                        <LinearLayout android:orientation="horizontal" android:padding="10dp" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                            <ImageView android:layout_width="80dp" android:layout_height="80dp" android:src="@drawable/alert"/>
+                            <TextView android:textSize="15dp" android:textColor="@color/white" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10dp" android:text="During a storm that could cause a landslide, stay alert and awake. Many deaths from landslides occur while people are sleeping. (Sa panahon ng bagyo na maaaring magdulot ng pagguho ng lupa, manatiling alerto at gising. Maraming pagkamatay mula sa pagguho ng lupa ang nangyayari habang natutulog ang mga tao.)"/>
+                        </LinearLayout>
+                        <LinearLayout android:orientation="horizontal" android:padding="10dp" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                            <ImageView android:layout_width="80dp" android:layout_height="80dp" android:src="@drawable/stopcar"/>
+                            <TextView android:textSize="15dp" android:textColor="@color/white" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10dp" android:text="Be aware that by the time you are sure a debris flow is coming, that will be too late to get away safely. Never cross a road with water or mud flowing. Never cross a bridge if you see a flow approaching. It can grow faster and larger too quickly for you to escape. (Magkaroon ng kamalayan na sa oras na sigurado kang may dumarating na debris, huli na iyon para makaalis nang ligtas. Huwag kailanman tumawid sa kalsada na may tubig o putik na umaagos. Huwag na huwag tumawid sa tulay kung may nakita kang papalapit na daloy. Maaari itong lumaki nang mas mabilis at mas malaki nang napakabilis at mahirap nang makatakas.)"/>
+                        </LinearLayout>
+                        <LinearLayout android:orientation="horizontal" android:padding="10dp" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                            <ImageView android:layout_width="80dp" android:layout_height="80dp" android:src="@drawable/climbhigh"/>
+                            <TextView android:textSize="15dp" android:textColor="@color/white" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10dp" android:text="If you do get stuck in the path of a landslide move uphill as quickly as possible. (Kung ikaw ay natigil sa landas ng pagguho ng lupa, umakyat nang mabilis hangga&apos;t maaari.)"/>
+                        </LinearLayout>
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+                <com.google.android.material.card.MaterialCardView style="@style/Widget.Material3.CardView.Elevated" android:id="@+id/card3" android:layout_width="340dp" android:layout_height="match_parent" android:layout_margin="12dp" android:layout_rowWeight="1" android:layout_columnWeight="1" app:cardBackgroundColor="#cf142b" app:cardCornerRadius="20dp" app:cardElevation="6dp">
+                    <LinearLayout android:gravity="center" android:orientation="vertical" android:padding="10dp" android:layout_width="match_parent" android:layout_height="wrap_content">
+                        <TextView android:textSize="25dp" android:textStyle="bold" android:textColor="@color/white" android:gravity="center_horizontal" android:layout_gravity="center" android:padding="5dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="What to do AFTER a Landslide" android:textAlignment="center" android:elevation="6dp"/>
+                        <LinearLayout android:orientation="horizontal" android:padding="10dp" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                            <ImageView android:layout_width="80dp" android:layout_height="80dp" android:src="@drawable/stayaway"/>
+                            <TextView android:textSize="15dp" android:textColor="@color/white" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10dp" android:text="Stay away from the slide area. There may be danger of additional slides. (Lumayo sa lugar ng landslide. Maaaring may panganib ng karagdagang mga landslide.)"/>
+                        </LinearLayout>
+                        <LinearLayout android:orientation="horizontal" android:padding="10dp" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                            <ImageView android:layout_width="80dp" android:layout_height="80dp" android:src="@drawable/checkup"/>
+                            <TextView android:textSize="15dp" android:textColor="@color/white" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10dp" android:text="Check for injured and trapped persons near the slide, without entering the direct slide area. Direct rescuers to their locations. TIP: IF YOU EVER FIND YOURSELF TRAPPED IN A LANDSLIDE, YOU CAN USE THE TOOLS PROVIDED IN THIS APP, SUCH AS THE EMERGENCY MESSAGE BUTTON, WHICH SENDS YOUR CURRENT LOCATION AND THE SOS SOUND, TO MAKE THE RESCUERS FIND YOU. (Suriin kung may nasugatan at nakulong na mga tao malapit sa slide, nang hindi pumapasok sa direktang lugar ng slide. Idirekta ang mga rescuer sa kanilang mga lokasyon. TIP: KUNG MATATAGPUAN MO ANG IYONG SARILI NA NA-TRAP SA ISANG LANDSLIDE, MAAARI MO GAMITIN ANG MGA TOOL NA IBINIGAY SA APP NA ITO, TULAD NG EMERGENCY MESSAGE BUTTON, NA MAG-SESEND NG IYONG KASALUKUYANG LOKASYON AT ANG SOS SOUND, UPANG MADALI KANG MATAGPUAN NG MGA RESCUER.)"/>
+                        </LinearLayout>
+                        <LinearLayout android:orientation="horizontal" android:padding="10dp" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                            <ImageView android:layout_width="80dp" android:layout_height="80dp" android:src="@drawable/announcement"/>
+                            <TextView android:textSize="15dp" android:textColor="@color/white" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10dp" android:text="Listen to authorities to find out if it is safe to return (Makinig sa mga awtoridad para malaman kung ligtas na bumalik.)"/>
+                        </LinearLayout>
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+            </GridLayout>
+        </HorizontalScrollView>
+    </LinearLayout>
+</ScrollView>
