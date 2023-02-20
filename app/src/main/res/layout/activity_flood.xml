@@ -29,7 +29,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentEnd="true"
-                app:cardCornerRadius="10dp"
+                app:cardCornerRadius="20dp"
                 android:elevation="10dp">
 
                 <ImageView
@@ -42,13 +42,12 @@
         </RelativeLayout>
         <GridLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="15dp" android:rowCount="1" android:columnCount="1" android:columnOrderPreserved="false" android:alignmentMode="alignMargins">
             <com.google.android.material.card.MaterialCardView
-                android:id="@+id/typhooncardtop"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_margin="12dp"
                 android:layout_rowWeight="1"
                 android:layout_columnWeight="1"
-                app:cardCornerRadius="20dp"
+                app:cardCornerRadius="28dp"
                 app:cardElevation="6dp">
 
                 <LinearLayout android:layout_gravity="center" android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content">
@@ -92,7 +91,7 @@
                 android:layout_margin="12dp"
                 android:layout_rowWeight="1"
                 android:layout_columnWeight="1"
-                app:cardCornerRadius="20dp"
+                app:cardCornerRadius="28dp"
                 app:cardElevation="6dp">
 
                 <LinearLayout android:layout_gravity="center" android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content">
@@ -125,7 +124,7 @@
                 android:layout_margin="12dp"
                 android:layout_rowWeight="1"
                 android:layout_columnWeight="1"
-                app:cardCornerRadius="20dp"
+                app:cardCornerRadius="28dp"
                 app:cardElevation="6dp"
                 >
 
@@ -154,7 +153,7 @@
         </GridLayout>
         <HorizontalScrollView android:layout_width="match_parent" android:layout_height="wrap_content">
             <GridLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:rowCount="1" android:columnCount="3" android:columnOrderPreserved="false" android:alignmentMode="alignMargins">
-                <com.google.android.material.card.MaterialCardView style="@style/Widget.Material3.CardView.Elevated" android:layout_width="340dp" android:layout_height="wrap_content" android:layout_margin="12dp" android:foreground="?android:attr/selectableItemBackground" android:layout_rowWeight="1" android:layout_columnWeight="1" app:cardBackgroundColor="#f7b500" app:cardCornerRadius="20dp" app:cardElevation="6dp">
+                <com.google.android.material.card.MaterialCardView style="@style/Widget.Material3.CardView.Elevated" android:layout_width="340dp" android:layout_height="wrap_content" android:layout_margin="12dp" android:foreground="?android:attr/selectableItemBackground" android:layout_rowWeight="1" android:layout_columnWeight="1" app:cardBackgroundColor="#f7b500" app:cardCornerRadius="28dp" app:cardElevation="6dp">
                     <LinearLayout android:gravity="center" android:orientation="vertical" android:padding="10dp" android:layout_width="match_parent" android:layout_height="wrap_content">
                         <TextView android:textSize="25dp" android:textStyle="bold" android:textColor="@color/white" android:gravity="center_horizontal" android:layout_gravity="center" android:padding="5dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="What to do BEFORE flood" android:textAlignment="center" android:elevation="6dp"/>
                         <TextView android:textSize="15sp" android:textColor="@color/white" android:gravity="center_horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="KNOW THE HAZARDS IN YOUR AREA." android:textAlignment="center"/>
@@ -188,7 +187,7 @@
                         </LinearLayout>
                     </LinearLayout>
                 </com.google.android.material.card.MaterialCardView>
-                <com.google.android.material.card.MaterialCardView style="@style/Widget.Material3.CardView.Elevated" android:id="@+id/card2" android:layout_width="340dp" android:layout_height="wrap_content" android:layout_margin="12dp" android:foreground="?android:attr/selectableItemBackground" android:layout_rowWeight="1" android:layout_columnWeight="1" app:cardBackgroundColor="#33a532" app:cardCornerRadius="20dp" app:cardElevation="6dp">
+                <com.google.android.material.card.MaterialCardView style="@style/Widget.Material3.CardView.Elevated" android:id="@+id/card2" android:layout_width="340dp" android:layout_height="wrap_content" android:layout_margin="12dp" android:foreground="?android:attr/selectableItemBackground" android:layout_rowWeight="1" android:layout_columnWeight="1" app:cardBackgroundColor="#33a532" app:cardCornerRadius="28dp" app:cardElevation="6dp">
                     <LinearLayout android:gravity="center" android:orientation="vertical" android:padding="10dp" android:layout_width="match_parent" android:layout_height="wrap_content">
                         <TextView android:textSize="25dp" android:textStyle="bold" android:textColor="@color/white" android:gravity="center_horizontal" android:layout_gravity="center" android:padding="5dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="What to do DURING a flood" android:textAlignment="center" android:elevation="6dp"/>
                         <TextView android:textSize="15sp" android:textColor="@color/white" android:gravity="center_horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="STAY ON HIGHER GROUNDS!" android:textAlignment="center"/>
@@ -214,7 +213,7 @@
                         </LinearLayout>
                     </LinearLayout>
                 </com.google.android.material.card.MaterialCardView>
-                <com.google.android.material.card.MaterialCardView style="@style/Widget.Material3.CardView.Elevated" android:id="@+id/card3" android:layout_width="340dp" android:layout_height="match_parent" android:layout_margin="12dp" android:layout_rowWeight="1" android:layout_columnWeight="1" app:cardBackgroundColor="#cf142b" app:cardCornerRadius="20dp" app:cardElevation="6dp">
+                <com.google.android.material.card.MaterialCardView style="@style/Widget.Material3.CardView.Elevated" android:id="@+id/card3" android:layout_width="340dp" android:layout_height="match_parent" android:layout_margin="12dp" android:layout_rowWeight="1" android:layout_columnWeight="1" app:cardBackgroundColor="#cf142b" app:cardCornerRadius="28dp" app:cardElevation="6dp">
                     <LinearLayout android:gravity="center" android:orientation="vertical" android:padding="10dp" android:layout_width="match_parent" android:layout_height="wrap_content">
                         <TextView android:textSize="25dp" android:textStyle="bold" android:textColor="@color/white" android:gravity="center_horizontal" android:layout_gravity="center" android:padding="5dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="What to do AFTER a flood" android:textAlignment="center" android:elevation="6dp"/>
                         <TextView android:textSize="15sp" android:textColor="@color/white" android:gravity="center_horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="STAY ALERT AND KEEP SAFE." android:textAlignment="center"/>

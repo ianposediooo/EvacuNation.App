@@ -1,5 +1,6 @@
 package com.example.evacunation;
 
+import android.content.Context;
 import android.graphics.Bitmap;
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -35,7 +36,6 @@ public class hazard extends Fragment {
         settings.setJavaScriptEnabled(true);
         settings.setLightTouchEnabled(true);
         settings.setGeolocationEnabled(true);
-        settings.setAppCacheEnabled(true);
         settings.setDatabaseEnabled(true);
         settings.setDomStorageEnabled(true);
         ((Button) inflate.findViewById(R.id.goback)).setOnClickListener(new View.OnClickListener() { // from class: com.example.evacunation.hazard.1
@@ -68,10 +68,9 @@ public class hazard extends Fragment {
             @Override // android.webkit.WebViewClient
             public void onReceivedError(WebView webView2, int i, String str, String str2) {
                 super.onReceivedError(hazard.this.mWebView, i, str, str2);
-//                Toast.makeText(hazard.this.getActivity(), str, Toast.LENGTH_SHORT).show();
             }
         });
-        this.mWebView.loadUrl("https://noah.up.edu.ph");
+        this.mWebView.loadUrl("https://noah.up.edu.ph/know-your-hazards");
         this.progressBar.setProgress(0);
         this.mWebView.setWebChromeClient(new WebChromeClient() { // from class: com.example.evacunation.hazard.4
             @Override // android.webkit.WebChromeClient
@@ -95,7 +94,7 @@ public class hazard extends Fragment {
         textView.setOnClickListener(new View.OnClickListener() { // from class: com.example.evacunation.hazard.5
             @Override // android.view.View.OnClickListener
             public void onClick(View view) {
-                hazard.this.mWebView.loadUrl("https://noah.up.edu.ph");
+                hazard.this.mWebView.loadUrl("https://noah.up.edu.ph/know-your-hazards");
             }
         });
         return inflate;

@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/frameLayout" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_marginBottom="55dp">
+    android:layout_width="match_parent" android:layout_height="match_parent" android:layout_marginBottom="55dp">
     <SurfaceView android:id="@+id/PREVIEW" android:layout_width="1dp" android:layout_height="1dp" android:layout_centerInParent="true"/>
     <ImageView android:id="@+id/imageView4" android:layout_width="match_parent" android:layout_height="100dp" android:layout_marginBottom="-12dp" android:src="@drawable/evaclogo_2" android:layout_below="@+id/toolbar"/>
-    <TextView android:textSize="23sp" android:textStyle="bold" android:textColor="@color/black" android:gravity="center_horizontal" android:id="@+id/textView" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Tools" android:layout_below="@+id/imageView4" android:textAllCaps="true" android:textAlignment="center"/>
+    <TextView android:textSize="23sp" android:textStyle="bold" android:textColor="@color/black" android:gravity="center_horizontal"
+        android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Tools" android:layout_below="@+id/imageView4" android:textAllCaps="true" android:textAlignment="center"/>
 
     <ImageButton
         android:id="@+id/toggleButton"

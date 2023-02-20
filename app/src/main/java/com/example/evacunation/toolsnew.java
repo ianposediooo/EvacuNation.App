@@ -1,7 +1,6 @@
 package com.example.evacunation;
 
 import android.app.Activity;
-import android.app.AlertDialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
@@ -17,7 +16,6 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.view.inputmethod.InputMethodManager;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.ImageView;
@@ -25,8 +23,8 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatDelegate;
 import androidx.cardview.widget.CardView;
+import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
 import androidx.fragment.app.Fragment;
 import com.google.android.gms.location.LocationServices;
@@ -50,14 +48,17 @@ public class toolsnew extends Fragment {
     public CardView card6;
     public CardView card7;
     ImageButton flash;
-    ImageView imagemode;
+    ImageView playstopbutton;
     private boolean hasFlash;
     private boolean isLighOn = false;
     private String m_Text = "";
     Camera.Parameters params;
     TextView tv;
+    TextView sostv;
     TextView mode;
     View view;
+    private boolean isServiceRunning = false;
+    private Intent soundServiceIntent;
 
     @Override // androidx.fragment.app.Fragment
     public void onStart() {
@@ -154,6 +155,8 @@ public class toolsnew extends Fragment {
         this.card5 = (CardView) this.view.findViewById(R.id.card5);
         this.card6 = (CardView) this.view.findViewById(R.id.card6);
 
+
+
         //dark mode
 //        this.card7 = (CardView) this.view.findViewById(R.id.card7);
 //        this.mode = (TextView) this.view.findViewById(R.id.darkmodeoff);
@@ -186,7 +189,7 @@ public class toolsnew extends Fragment {
             @Override // android.view.View.OnClickListener
             public void onClick(View view) {
                 MaterialAlertDialogBuilder builder = new MaterialAlertDialogBuilder(toolsnew.this.getActivity(),R.style.CustomDialogTheme);
-                builder.setTitle("Do you want to call Emergency Hotline 911?");
+                builder.setTitle("Call Philippines Emergency Hotline 911?");
                 builder.setIcon(R.drawable.callemergency);
                 builder.setNegativeButton("No", new DialogInterface.OnClickListener() { // from class: com.example.evacunation.toolsnew.2.1
                     @Override // android.content.DialogInterface.OnClickListener
@@ -203,28 +206,35 @@ public class toolsnew extends Fragment {
                 builder.show();
             }
         });
+
+
         this.card2.setOnClickListener(new View.OnClickListener() { // from class: com.example.evacunation.toolsnew.3
             @Override // android.view.View.OnClickListener
             public void onClick(View view) {
                 toolsnew.this.getLocation();
             }
         });
+
+
         this.tv = (TextView) this.view.findViewById(R.id.textViewoff);
         this.flash = (ImageButton) this.view.findViewById(R.id.flash);
+
         this.card3.setOnClickListener(new View.OnClickListener() { // from class: com.example.evacunation.toolsnew.4
             @Override // android.view.View.OnClickListener
             public void onClick(View view) {
                 if (toolsnew.this.isLighOn) {
                     toolsnew.this.tv.setText("Flashlight\nis OFF");
                     toolsnew.this.flash.setImageResource(R.drawable.flashofff);
+                    toolsnew.this.card3.setCardBackgroundColor(ActivityCompat.getColor(toolsnew.this.getActivity(), R.color.grey));
                     toolsnew.this.turnOffFlash();
-                    Toast.makeText(toolsnew.this.getActivity(), "Flash turned OFF", Toast.LENGTH_SHORT).show();
+                    /*Toast.makeText(toolsnew.this.getActivity(), "Flash turned OFF", Toast.LENGTH_SHORT).show();*/
                     return;
                 }
                 toolsnew.this.tv.setText("Flashlight\nis ON");
                 toolsnew.this.flash.setImageResource(R.drawable.flash_on);
+                toolsnew.this.card3.setCardBackgroundColor(ActivityCompat.getColor(toolsnew.this.getActivity(), R.color.flashyellow));
                 toolsnew.this.turnOnFlash();
-                Toast.makeText(toolsnew.this.getActivity(), "Flash turned ON", Toast.LENGTH_SHORT).show();
+                /*Toast.makeText(toolsnew.this.getActivity(), "Flash turned ON", Toast.LENGTH_SHORT).show();*/
             }
         });
         this.flash.setOnClickListener(new View.OnClickListener() { // from class: com.example.evacunation.toolsnew.5
@@ -233,28 +243,46 @@ public class toolsnew extends Fragment {
                 if (toolsnew.this.isLighOn) {
                     toolsnew.this.tv.setText("Flashlight\nis OFF");
                     toolsnew.this.flash.setImageResource(R.drawable.flashofff);
+                    toolsnew.this.card3.setCardBackgroundColor(ActivityCompat.getColor(toolsnew.this.getActivity(), R.color.grey));
                     toolsnew.this.turnOffFlash();
-                    Toast.makeText(toolsnew.this.getActivity(), "Flash turned OFF", Toast.LENGTH_SHORT).show();
+                    /*Toast.makeText(toolsnew.this.getActivity(), "Flash turned OFF", Toast.LENGTH_SHORT).show();*/
                     return;
                 }
                 toolsnew.this.tv.setText("Flashlight\nis ON");
                 toolsnew.this.flash.setImageResource(R.drawable.flash_on);
+                toolsnew.this.card3.setCardBackgroundColor(ActivityCompat.getColor(toolsnew.this.getActivity(), R.color.flashyellow));
                 toolsnew.this.turnOnFlash();
-                Toast.makeText(toolsnew.this.getActivity(), "Flash turned ON", Toast.LENGTH_SHORT).show();
+                /*Toast.makeText(toolsnew.this.getActivity(), "Flash turned ON", Toast.LENGTH_SHORT).show();*/
             }
         });
-        this.card4.setOnClickListener(new View.OnClickListener() { // from class: com.example.evacunation.toolsnew.6
-            @Override // android.view.View.OnClickListener
+
+        this.sostv = (TextView) this.view.findViewById(R.id.sostext);
+        this.playstopbutton = (ImageView) this.view.findViewById(R.id.playbutton);
+        this.soundServiceIntent = new Intent(toolsnew.this.getActivity(), SoundService.class);
+        this.card4.setOnClickListener(new View.OnClickListener() {
+            @Override
             public void onClick(View view) {
-                toolsnew.this.getActivity().startService(new Intent(toolsnew.this.getActivity(), SoundService.class));
-                Toast.makeText(toolsnew.this.getActivity(), "SOS sound Playing", Toast.LENGTH_SHORT).show();
+                if (!isServiceRunning) {
+                    toolsnew.this.getActivity().startService(soundServiceIntent);
+                    toolsnew.this.sostv.setText("Stop SOS\nSound");
+                    toolsnew.this.playstopbutton.setImageResource(R.drawable.stopcircle);
+                    toolsnew.this.card4.setCardBackgroundColor(ActivityCompat.getColor(toolsnew.this.getActivity(), R.color.black));
+                } else {
+                    toolsnew.this.getActivity().stopService(soundServiceIntent);
+                    toolsnew.this.sostv.setText("Play SOS\nSound");
+                    toolsnew.this.playstopbutton.setImageResource(R.drawable.play);
+                    toolsnew.this.card4.setCardBackgroundColor(ActivityCompat.getColor(toolsnew.this.getActivity(), R.color.sosgreen));
+                }
+                isServiceRunning = !isServiceRunning;
+
             }
         });
+
+
         this.card5.setOnClickListener(new View.OnClickListener() { // from class: com.example.evacunation.toolsnew.7
             @Override // android.view.View.OnClickListener
             public void onClick(View view) {
-                toolsnew.this.getActivity().stopService(new Intent(toolsnew.this.getActivity(), SoundService.class));
-                Toast.makeText(toolsnew.this.getActivity(), "SOS sound Stopped", Toast.LENGTH_SHORT).show();
+                toolsnew.this.getActivity().startActivity(new Intent(toolsnew.this.getActivity(), hotlines.class));
             }
         });
         this.card6.setOnClickListener(new View.OnClickListener() { // from class: com.example.evacunation.disasterfragment.6

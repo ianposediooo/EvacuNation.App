@@ -40,13 +40,11 @@ public class CovidActivity extends AppCompatActivity {
         settings.setJavaScriptEnabled(true);
         settings.setLightTouchEnabled(true);
         settings.setGeolocationEnabled(true);
-        settings.setAppCacheEnabled(true);
         settings.setDatabaseEnabled(true);
         settings.setDomStorageEnabled(true);
         settings.setBuiltInZoomControls(true);
         settings.setDisplayZoomControls(false);
         String appCachePath = this.getCacheDir().getAbsolutePath();
-        settings.setAppCachePath(appCachePath);
         settings.setCacheMode(WebSettings.LOAD_CACHE_ELSE_NETWORK);
 
         if ( !isNetworkAvailable() )  //offline

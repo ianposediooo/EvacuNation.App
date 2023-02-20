@@ -1,26 +1,23 @@
 package com.example.evacunation;
 
-import android.app.Activity;
 import android.content.Intent;
 import android.graphics.Color;
 import android.location.Address;
 import android.location.Geocoder;
 import android.location.Location;
-import android.os.Build;
 import android.os.Bundle;
 import android.util.Log;
-import android.view.KeyEvent;
-import android.view.View;
 import android.view.Window;
-import android.view.WindowManager;
 import android.widget.EditText;
 import android.widget.ImageView;
-import android.widget.TextView;
 import android.widget.Toast;
+
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
 import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
+
 import com.google.android.gms.location.FusedLocationProviderClient;
 import com.google.android.gms.location.LocationServices;
 import com.google.android.gms.maps.CameraUpdateFactory;
@@ -31,9 +28,15 @@ import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
+import com.google.maps.android.data.geojson.GeoJsonLayer;
+import com.google.maps.android.data.geojson.GeoJsonPolygonStyle;
+
+import org.json.JSONException;
+
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 
 /* loaded from: classes.dex */
 public class MapActivity extends AppCompatActivity implements OnMapReadyCallback {
@@ -42,7 +45,6 @@ public class MapActivity extends AppCompatActivity implements OnMapReadyCallback
     private static final String FINE_LOCATION = "android.permission.ACCESS_FINE_LOCATION";
     private static final int LOCATION_PERMISSION_REQUEST_CODE = 1234;
     private static final String TAG = "MapActivity";
-    private FusedLocationProviderClient mFusedLocationProviderClient;
     private ImageView mGps;
     private CardView mHome;
     private Boolean mLocationPermissionsGranted = false;
@@ -50,15 +52,35 @@ public class MapActivity extends AppCompatActivity implements OnMapReadyCallback
     private EditText mSearchText;
 
     @Override // com.google.android.gms.maps.OnMapReadyCallback
-    public void onMapReady(GoogleMap googleMap) {
+    public void onMapReady(@NonNull GoogleMap googleMap) {
 //        Toast.makeText(this, "Map is Ready", Toast.LENGTH_SHORT).show();
         Log.d(TAG, "onMapReady: map is ready");
         this.mMap = googleMap;
         new location().onMapReady(googleMap);
-        if (this.mLocationPermissionsGranted.booleanValue()) {
+        if (this.mLocationPermissionsGranted) {
             getDeviceLocation();
             if (ActivityCompat.checkSelfPermission(this, FINE_LOCATION) == 0 || ActivityCompat.checkSelfPermission(this, COARSE_LOCATION) == 0) {
                 this.mMap.setMyLocationEnabled(true);
+                this.mMap.setMapType(GoogleMap.MAP_TYPE_NORMAL);
+                try {
+                    GeoJsonLayer layer = new GeoJsonLayer(mMap, R.raw.phfaultslines, this);
+                    GeoJsonPolygonStyle polygonStyle = layer.getDefaultPolygonStyle();
+                    polygonStyle.setStrokeColor(Color.RED);
+                    polygonStyle.setStrokeWidth(1);
+                    layer.addLayerToMap();
+                } catch (JSONException | IOException e) {
+                    e.printStackTrace();
+                }
+                Toast.makeText(this, "Black Solid Lines are Fault Lines", Toast.LENGTH_LONG).show();
+                /*try {
+                    GeoJsonLayer layer = new GeoJsonLayer(mMap, R.raw.boundaries, this);
+                    GeoJsonPolygonStyle polygonStyle = layer.getDefaultPolygonStyle();
+                    polygonStyle.setStrokeColor(Color.GRAY);
+                    polygonStyle.setStrokeWidth(3);
+                    layer.addLayerToMap();
+                } catch (JSONException | IOException e) {
+                    e.printStackTrace();
+                }*/
                 this.mMap.getUiSettings().setMyLocationButtonEnabled(true);
                 this.mMap.getUiSettings().setCompassEnabled(true);
                 this.mMap.getUiSettings().setZoomControlsEnabled(true);
@@ -75,9 +97,9 @@ public class MapActivity extends AppCompatActivity implements OnMapReadyCallback
     public void onCreate(Bundle bundle) {
         super.onCreate(bundle);
         setContentView(R.layout.activity_map);
-        this.mSearchText = (EditText) findViewById(R.id.input_search);
-        this.mGps = (ImageView) findViewById(R.id.ic_gps);
-        this.mHome = (CardView) findViewById(R.id.cardviewhome);
+        this.mSearchText = findViewById(R.id.input_search);
+        this.mGps = findViewById(R.id.ic_gps);
+        this.mHome = findViewById(R.id.cardviewhome);
         Window window = getWindow();
         window.addFlags(Integer.MIN_VALUE);
         window.clearFlags(67108864);
@@ -88,28 +110,23 @@ public class MapActivity extends AppCompatActivity implements OnMapReadyCallback
 
     private void init() {
         Log.d(TAG, "init: initializing");
-        this.mSearchText.setOnEditorActionListener(new TextView.OnEditorActionListener() { // from class: com.example.evacunation.MapActivity.1
-            @Override // android.widget.TextView.OnEditorActionListener
-            public boolean onEditorAction(TextView textView, int i, KeyEvent keyEvent) {
-                if (i != 3 && i != 6 && keyEvent.getAction() != 0 && keyEvent.getAction() != 66) {
-                    return false;
-                }
-                MapActivity.this.geoLocate();
+        // from class: com.example.evacunation.MapActivity.1
+// android.widget.TextView.OnEditorActionListener
+        this.mSearchText.setOnEditorActionListener((textView, i, keyEvent) -> {
+            if (i != 3 && i != 6 && keyEvent.getAction() != 0 && keyEvent.getAction() != 66) {
                 return false;
             }
+            MapActivity.this.geoLocate();
+            return false;
         });
-        this.mHome.setOnClickListener(new View.OnClickListener() { // from class: com.example.evacunation.MapActivity.2
-            @Override // android.view.View.OnClickListener
-            public void onClick(View view) {
-                MapActivity.this.startActivity(new Intent(MapActivity.this, MainActivity.class));
-            }
-        });
-        this.mGps.setOnClickListener(new View.OnClickListener() { // from class: com.example.evacunation.MapActivity.3
-            @Override // android.view.View.OnClickListener
-            public void onClick(View view) {
-                Log.d(MapActivity.TAG, "onClick: clicked gps icon");
-                MapActivity.this.getDeviceLocation();
-            }
+        // from class: com.example.evacunation.MapActivity.2
+// android.view.View.OnClickListener
+        this.mHome.setOnClickListener(view -> MapActivity.this.startActivity(new Intent(MapActivity.this, MainActivity.class)));
+        // from class: com.example.evacunation.MapActivity.3
+// android.view.View.OnClickListener
+        this.mGps.setOnClickListener(view -> {
+            Log.d(MapActivity.TAG, "onClick: clicked gps icon");
+            MapActivity.this.getDeviceLocation();
         });
         hideSoftKeyboard();
     }
@@ -135,12 +152,12 @@ public class MapActivity extends AppCompatActivity implements OnMapReadyCallback
     /* JADX INFO: Access modifiers changed from: private */
     public void getDeviceLocation() {
         Log.d(TAG, "getDeviceLocation: getting the devices current location");
-        this.mFusedLocationProviderClient = LocationServices.getFusedLocationProviderClient((Activity) this);
+        FusedLocationProviderClient mFusedLocationProviderClient = LocationServices.getFusedLocationProviderClient(this);
         try {
-            if (this.mLocationPermissionsGranted.booleanValue()) {
-                this.mFusedLocationProviderClient.getLastLocation().addOnCompleteListener(new OnCompleteListener() { // from class: com.example.evacunation.MapActivity.4
+            if (this.mLocationPermissionsGranted) {
+                mFusedLocationProviderClient.getLastLocation().addOnCompleteListener(new OnCompleteListener() { // from class: com.example.evacunation.MapActivity.4
                     @Override // com.google.android.gms.tasks.OnCompleteListener
-                    public void onComplete(Task task) {
+                    public void onComplete(@NonNull Task task) {
                         if (task.isSuccessful()) {
                             Log.d(MapActivity.TAG, "onComplete: found location!");
                             Location location = (Location) task.getResult();
@@ -169,7 +186,7 @@ public class MapActivity extends AppCompatActivity implements OnMapReadyCallback
 
     private void initMap() {
         Log.d(TAG, "initMap: initializing map");
-        ((SupportMapFragment) getSupportFragmentManager().findFragmentById(R.id.map)).getMapAsync(this);
+        ((SupportMapFragment) Objects.requireNonNull(getSupportFragmentManager().findFragmentById(R.id.map))).getMapAsync(this);
     }
 
     private void getLocationPermission() {
@@ -186,7 +203,7 @@ public class MapActivity extends AppCompatActivity implements OnMapReadyCallback
     }
 
     @Override // androidx.fragment.app.FragmentActivity, androidx.activity.ComponentActivity, android.app.Activity
-    public void onRequestPermissionsResult(int i, String[] strArr, int[] iArr) {
+    public void onRequestPermissionsResult(int i, @NonNull String[] strArr, @NonNull int[] iArr) {
         super.onRequestPermissionsResult(i, strArr, iArr);
         Log.d(TAG, "onRequestPermissionsResult: called.");
         int i2 = 0;

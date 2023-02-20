@@ -38,7 +38,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentEnd="true"
-                app:cardCornerRadius="10dp"
+                app:cardCornerRadius="20dp"
                 android:elevation="10dp">
 
                 <ImageView
@@ -62,13 +62,12 @@
             <com.google.android.material.card.MaterialCardView
                 app:cardBackgroundColor="@color/white"
                 style="@style/Widget.Material3.CardView.Elevated"
-                android:id="@+id/typhooncardtop"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_margin="12dp"
                 android:layout_rowWeight="1"
                 android:layout_columnWeight="1"
-                app:cardCornerRadius="20dp"
+                app:cardCornerRadius="28dp"
                 app:cardElevation="6dp">
 
                 <ImageView
@@ -98,7 +97,7 @@
                 android:foreground="?android:attr/selectableItemBackground"
                 android:layout_rowWeight="1"
                 android:layout_columnWeight="1"
-                app:cardCornerRadius="20dp"
+                app:cardCornerRadius="28dp"
                 app:cardElevation="6dp">
 
                 <LinearLayout
@@ -134,7 +133,7 @@
                 android:foreground="?android:attr/selectableItemBackground"
                 android:layout_rowWeight="1"
                 android:layout_columnWeight="1"
-                app:cardCornerRadius="20dp"
+                app:cardCornerRadius="28dp"
                 app:cardElevation="10dp">
 
                 <LinearLayout
@@ -169,7 +168,7 @@
                 android:foreground="?android:attr/selectableItemBackground"
                 android:layout_rowWeight="1"
                 android:layout_columnWeight="1"
-                app:cardCornerRadius="20dp"
+                app:cardCornerRadius="28dp"
                 app:cardElevation="6dp">
 
                 <LinearLayout
@@ -204,7 +203,7 @@
                 android:foreground="?android:attr/selectableItemBackground"
                 android:layout_rowWeight="1"
                 android:layout_columnWeight="1"
-                app:cardCornerRadius="20dp"
+                app:cardCornerRadius="28dp"
                 app:cardElevation="6dp">
 
                 <LinearLayout
@@ -237,7 +236,7 @@
                 android:layout_margin="12dp"
                 android:layout_rowWeight="1"
                 android:layout_columnWeight="1"
-                app:cardCornerRadius="20dp"
+                app:cardCornerRadius="28dp"
                 app:cardElevation="6dp">
 
                 <LinearLayout
@@ -271,7 +270,7 @@
                 android:layout_margin="12dp"
                 android:layout_rowWeight="1"
                 android:layout_columnWeight="1"
-                app:cardCornerRadius="20dp"
+                app:cardCornerRadius="28dp"
                 app:cardElevation="6dp">
 
                 <LinearLayout
@@ -304,7 +303,7 @@
                 android:layout_margin="12dp"
                 android:layout_rowWeight="1"
                 android:layout_columnWeight="1"
-                app:cardCornerRadius="20dp"
+                app:cardCornerRadius="28dp"
                 app:cardElevation="6dp">
 
                 <LinearLayout
@@ -338,7 +337,7 @@
                 android:layout_margin="12dp"
                 android:layout_rowWeight="1"
                 android:layout_columnWeight="1"
-                app:cardCornerRadius="20dp"
+                app:cardCornerRadius="28dp"
                 app:cardElevation="6dp">
 
                 <LinearLayout

@@ -29,7 +29,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentEnd="true"
-                app:cardCornerRadius="10dp"
+                app:cardCornerRadius="20dp"
                 android:elevation="10dp">
 
                 <ImageView
@@ -41,16 +41,23 @@
             </com.google.android.material.card.MaterialCardView>
 
         </RelativeLayout>
-        <GridLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="15dp" android:rowCount="1" android:columnCount="1" android:columnOrderPreserved="false" android:alignmentMode="alignMargins">
+        <GridLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:rowCount="1"
+            android:columnCount="1"
+            android:columnOrderPreserved="false"
+            android:alignmentMode="alignMargins">
+
             <com.google.android.material.card.MaterialCardView
 
-                android:id="@+id/typhooncardtop"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_margin="12dp"
                 android:layout_rowWeight="1"
                 android:layout_columnWeight="1"
-                app:cardCornerRadius="20dp"
+                app:cardCornerRadius="28dp"
                 app:cardElevation="6dp">
 
                 <LinearLayout
@@ -112,7 +119,7 @@
                 android:layout_margin="12dp"
                 android:layout_rowWeight="1"
                 android:layout_columnWeight="1"
-                app:cardCornerRadius="20dp"
+                app:cardCornerRadius="28dp"
                 app:cardElevation="6dp">
 
                 <LinearLayout
@@ -171,7 +178,7 @@
                 android:layout_margin="12dp"
                 android:layout_rowWeight="1"
                 android:layout_columnWeight="1"
-                app:cardCornerRadius="20dp"
+                app:cardCornerRadius="28dp"
                 app:cardElevation="6dp">
 
                 <TextView
@@ -208,7 +215,7 @@
                     android:foreground="?android:attr/selectableItemBackground"
                     android:layout_rowWeight="1"
                     android:layout_columnWeight="0"
-                    app:cardCornerRadius="20dp"
+                    app:cardCornerRadius="28dp"
                     app:cardElevation="6dp">
 
                     <LinearLayout
@@ -277,7 +284,7 @@
                     android:foreground="?android:attr/selectableItemBackground"
                     android:layout_rowWeight="1"
                     android:layout_columnWeight="0"
-                    app:cardCornerRadius="20dp"
+                    app:cardCornerRadius="28dp"
                     app:cardElevation="6dp">
 
                     <LinearLayout android:gravity="center" android:orientation="vertical" android:padding="16dp" android:layout_width="match_parent" android:layout_height="match_parent">
@@ -340,7 +347,7 @@
                     android:foreground="?android:attr/selectableItemBackground"
                     android:layout_rowWeight="1"
                     android:layout_columnWeight="0"
-                    app:cardCornerRadius="20dp"
+                    app:cardCornerRadius="28dp"
                     app:cardElevation="6dp">
 
                     <LinearLayout
@@ -368,7 +375,6 @@
                                     android:textColor="@color/white"
                                     android:gravity="center"
                                     android:layout_gravity="center"
-                                    android:id="@+id/num"
                                     android:paddingLeft="5dp"
                                     android:paddingRight="5dp"
                                     android:layout_width="wrap_content"
@@ -410,7 +416,7 @@
                     android:foreground="?android:attr/selectableItemBackground"
                     android:layout_rowWeight="1"
                     android:layout_columnWeight="0"
-                    app:cardCornerRadius="20dp"
+                    app:cardCornerRadius="28dp"
                     app:cardElevation="6dp">
 
                     <LinearLayout
@@ -477,7 +483,7 @@
                     android:foreground="?android:attr/selectableItemBackground"
                     android:layout_rowWeight="1"
                     android:layout_columnWeight="0"
-                    app:cardCornerRadius="20dp"
+                    app:cardCornerRadius="28dp"
                     app:cardElevation="6dp">
 
                     <LinearLayout
@@ -555,7 +561,7 @@
                 android:layout_margin="12dp"
                 android:layout_rowWeight="1"
                 android:layout_columnWeight="1"
-                app:cardCornerRadius="20dp"
+                app:cardCornerRadius="28dp"
                 app:cardElevation="6dp"
                 >
 
@@ -604,7 +610,7 @@
                     android:layout_rowWeight="1"
                     android:layout_columnWeight="1"
                     app:cardBackgroundColor="#f7b500"
-                    app:cardCornerRadius="20dp"
+                    app:cardCornerRadius="28dp"
                     app:cardElevation="6dp">
 
                     <LinearLayout
@@ -657,7 +663,7 @@
                     </LinearLayout>
                 </com.google.android.material.card.MaterialCardView>
 
-                <com.google.android.material.card.MaterialCardView style="@style/Widget.Material3.CardView.Elevated" android:id="@+id/card2" android:layout_width="340dp" android:layout_height="wrap_content" android:layout_margin="12dp" android:foreground="?android:attr/selectableItemBackground" android:layout_rowWeight="1" android:layout_columnWeight="1" app:cardBackgroundColor="#33a532" app:cardCornerRadius="20dp" app:cardElevation="6dp">
+                <com.google.android.material.card.MaterialCardView style="@style/Widget.Material3.CardView.Elevated" android:id="@+id/card2" android:layout_width="340dp" android:layout_height="wrap_content" android:layout_margin="12dp" android:foreground="?android:attr/selectableItemBackground" android:layout_rowWeight="1" android:layout_columnWeight="1" app:cardBackgroundColor="#33a532" app:cardCornerRadius="28dp" app:cardElevation="6dp">
                     <LinearLayout android:gravity="center" android:orientation="vertical" android:padding="10dp" android:layout_width="match_parent" android:layout_height="wrap_content">
                         <TextView android:textSize="25sp" android:textStyle="bold" android:textColor="@color/white" android:gravity="center_horizontal" android:layout_gravity="center" android:padding="5dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="What to do DURING a Typhoon" android:shadowDx="2" android:shadowDy="2" android:shadowRadius="3" android:textAlignment="center" android:elevation="6dp"/>
                         <LinearLayout android:orientation="horizontal" android:padding="10dp" android:layout_width="wrap_content" android:layout_height="wrap_content">
@@ -679,7 +685,7 @@
                     </LinearLayout>
                 </com.google.android.material.card.MaterialCardView>
 
-                <com.google.android.material.card.MaterialCardView style="@style/Widget.Material3.CardView.Elevated" android:id="@+id/card3" android:layout_width="340dp" android:layout_height="match_parent" android:layout_margin="12dp" android:layout_rowWeight="1" android:layout_columnWeight="1" app:cardBackgroundColor="#cf142b" app:cardCornerRadius="20dp" app:cardElevation="6dp">
+                <com.google.android.material.card.MaterialCardView style="@style/Widget.Material3.CardView.Elevated" android:id="@+id/card3" android:layout_width="340dp" android:layout_height="match_parent" android:layout_margin="12dp" android:layout_rowWeight="1" android:layout_columnWeight="1" app:cardBackgroundColor="#cf142b" app:cardCornerRadius="28dp" app:cardElevation="6dp">
                     <LinearLayout android:gravity="center" android:orientation="vertical" android:padding="10dp" android:layout_width="match_parent" android:layout_height="wrap_content">
                         <TextView android:textSize="25sp" android:textStyle="bold" android:textColor="@color/white" android:gravity="center_horizontal" android:layout_gravity="center" android:padding="5dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="What to do AFTER a Typhoon hits" android:shadowDx="2" android:shadowDy="2" android:shadowRadius="3" android:textAlignment="center" android:elevation="6dp"/>
                         <LinearLayout android:orientation="horizontal" android:padding="10dp" android:layout_width="wrap_content" android:layout_height="wrap_content">

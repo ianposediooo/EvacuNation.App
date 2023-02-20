@@ -7,31 +7,29 @@
     <LinearLayout
         android:orientation="vertical"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="wrap_content">
         <RelativeLayout android:layout_width="match_parent" android:layout_height="match_parent" android:layout_marginLeft="20dp" android:layout_marginTop="20dp" android:layout_marginRight="20dp">
 
             <TextView
                 android:id="@+id/txtdisaster"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_alignParentStart="true"
-                android:layout_centerVertical="true"
+                android:layout_centerInParent="true"
                 android:layout_marginEnd="5dp"
-                android:layout_toStartOf="@+id/logotop"
                 android:shadowDx="2"
                 android:shadowDy="2"
                 android:shadowRadius="3"
                 android:text="ABOUT"
                 android:textColor="?attr/colorOnSurface"
-                android:textSize="25sp"
+                android:textSize="28sp"
                 android:textStyle="bold" />
 
-            <androidx.cardview.widget.CardView
+            <!--<androidx.cardview.widget.CardView
                 android:id="@+id/logotop"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentEnd="true"
-                app:cardCornerRadius="10dp"
+                app:cardCornerRadius="20dp"
                 android:elevation="10dp">
 
                 <ImageView
@@ -40,7 +38,7 @@
                     android:background="?attr/colorPrimary"
                     android:src="@drawable/evaclogo_2" />
 
-            </androidx.cardview.widget.CardView>
+            </androidx.cardview.widget.CardView>-->
         </RelativeLayout>
         <GridLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="15dp" android:rowCount="1" android:columnCount="1" android:columnOrderPreserved="false" android:alignmentMode="alignMargins">
             <androidx.cardview.widget.CardView
@@ -50,7 +48,7 @@
                 android:layout_rowWeight="1"
                 android:layout_columnWeight="1"
                 app:cardBackgroundColor="?attr/colorPrimary"
-                app:cardCornerRadius="20dp"
+                app:cardCornerRadius="28dp"
                 app:cardElevation="10dp">
 
                 <LinearLayout android:layout_gravity="center" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent">
@@ -221,18 +219,34 @@
                         <RelativeLayout
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:layout_marginTop="5dp">
+                            android:layout_marginTop="5dp"
+                            android:gravity="center">
 
                             <com.google.android.material.button.MaterialButton
                                 android:id="@+id/shareapp"
+                                android:layout_marginRight="10dp"
                                 style="@style/Widget.Material3.Button.ElevatedButton.Icon"
-                                android:layout_width="match_parent"
+                                android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:layout_centerHorizontal="true"
                                 android:text="Share App"
                                 android:textColor="?attr/colorOnSurface"
                                 android:textStyle="bold"
                                 app:icon="@drawable/share"
+                                app:iconGravity="textStart"
+                                app:iconTint="?attr/colorOnSurface">
+
+                            </com.google.android.material.button.MaterialButton>
+
+                            <com.google.android.material.button.MaterialButton
+                                android:layout_toRightOf="@+id/shareapp"
+                                android:id="@+id/github"
+                                style="@style/Widget.Material3.Button.ElevatedButton.Icon"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Github"
+                                android:textColor="?attr/colorOnSurface"
+                                android:textStyle="bold"
+                                app:icon="@drawable/github"
                                 app:iconGravity="textStart"
                                 app:iconTint="?attr/colorOnSurface">
 
@@ -253,7 +267,7 @@
                 android:layout_margin="12dp"
                 android:layout_rowWeight="1"
                 android:layout_columnWeight="1"
-                app:cardCornerRadius="20dp"
+                app:cardCornerRadius="28dp"
                 app:cardElevation="10dp">
                 <TextView
                     android:textColor="?attr/colorOnTertiary"
@@ -281,7 +295,7 @@
                 android:layout_margin="12dp"
                 android:layout_rowWeight="1"
                 android:layout_columnWeight="1"
-                app:cardCornerRadius="20dp"
+                app:cardCornerRadius="28dp"
                 app:cardElevation="10dp">
 
                 <LinearLayout android:layout_gravity="center" android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content">
@@ -302,7 +316,7 @@
                 android:layout_margin="12dp"
                 android:layout_rowWeight="1"
                 android:layout_columnWeight="1"
-                app:cardCornerRadius="20dp"
+                app:cardCornerRadius="28dp"
                 app:cardElevation="10dp">
                 <LinearLayout android:layout_gravity="center" android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content">
                     <ImageView android:padding="40dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/micell" android:adjustViewBounds="true"/>
@@ -322,7 +336,7 @@
                 android:layout_margin="12dp"
                 android:layout_rowWeight="1"
                 android:layout_columnWeight="1"
-                app:cardCornerRadius="20dp"
+                app:cardCornerRadius="28dp"
                 app:cardElevation="10dp">
 
                 <LinearLayout android:layout_gravity="center" android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content">
@@ -354,7 +368,7 @@
                 android:layout_rowWeight="1"
                 android:layout_columnWeight="1"
                 app:cardBackgroundColor="?attr/colorSecondary"
-                app:cardCornerRadius="20dp"
+                app:cardCornerRadius="28dp"
                 app:cardElevation="10dp">
 
                 <TextView
@@ -393,7 +407,7 @@
                     android:layout_rowWeight="1"
                     android:layout_columnWeight="0"
                     app:cardBackgroundColor="?attr/colorSecondary"
-                    app:cardCornerRadius="20dp"
+                    app:cardCornerRadius="28dp"
                     app:cardElevation="10dp">
 
                     <LinearLayout
@@ -412,7 +426,7 @@
                     android:layout_rowWeight="1"
                     android:layout_columnWeight="0"
                     app:cardBackgroundColor="?attr/colorSecondary"
-                    app:cardCornerRadius="20dp"
+                    app:cardCornerRadius="28dp"
                     app:cardElevation="10dp">
 
                     <LinearLayout android:gravity="center" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent">
@@ -427,7 +441,7 @@
                     android:layout_rowWeight="1"
                     android:layout_columnWeight="0"
                     app:cardBackgroundColor="?attr/colorSecondary"
-                    app:cardCornerRadius="20dp"
+                    app:cardCornerRadius="28dp"
                     app:cardElevation="10dp">
 
                     <LinearLayout android:gravity="center" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent">
@@ -442,7 +456,7 @@
                     android:layout_rowWeight="1"
                     android:layout_columnWeight="0"
                     app:cardBackgroundColor="?attr/colorSecondary"
-                    app:cardCornerRadius="20dp"
+                    app:cardCornerRadius="28dp"
                     app:cardElevation="10dp">
 
                     <LinearLayout android:gravity="center" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent">
@@ -457,7 +471,7 @@
                     android:layout_rowWeight="1"
                     android:layout_columnWeight="0"
                     app:cardBackgroundColor="?attr/colorSecondary"
-                    app:cardCornerRadius="20dp"
+                    app:cardCornerRadius="28dp"
                     app:cardElevation="10dp">
 
                     <LinearLayout android:gravity="center" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent">
@@ -472,7 +486,7 @@
                     android:layout_rowWeight="1"
                     android:layout_columnWeight="0"
                     app:cardBackgroundColor="?attr/colorSecondary"
-                    app:cardCornerRadius="20dp"
+                    app:cardCornerRadius="28dp"
                     app:cardElevation="10dp">
 
                     <LinearLayout android:gravity="center" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent">

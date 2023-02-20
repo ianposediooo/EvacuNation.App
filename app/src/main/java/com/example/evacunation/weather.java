@@ -38,7 +38,6 @@ public class weather extends Fragment {
         settings.setJavaScriptEnabled(true);
         settings.setLightTouchEnabled(true);
         settings.setGeolocationEnabled(true);
-        settings.setAppCacheEnabled(true);
         settings.setDatabaseEnabled(true);
         settings.setDomStorageEnabled(true);
         ((Button) inflate.findViewById(R.id.goback)).setOnClickListener(new View.OnClickListener() { // from class: com.example.evacunation.weather.1

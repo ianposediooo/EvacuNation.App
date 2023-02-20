@@ -39,7 +39,6 @@ public class news extends Fragment {
         settings.setJavaScriptEnabled(true);
         settings.setLightTouchEnabled(true);
         settings.setGeolocationEnabled(true);
-        settings.setAppCacheEnabled(true);
         settings.setDatabaseEnabled(true);
         settings.setDomStorageEnabled(true);
 

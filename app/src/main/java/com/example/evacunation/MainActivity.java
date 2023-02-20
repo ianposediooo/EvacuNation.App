@@ -37,6 +37,7 @@ public class MainActivity extends AppCompatActivity {
     SharedPreferences.Editor editor;
 
     private static final String TAG = "MainActivity";
+    private int mCounter = 0;
     private static final int ERROR_DIALOG_REQUEST = 9001;
     private BottomNavigationView navigationView;
 //    private FrameLayout frameLayout;
@@ -44,8 +45,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onSaveInstanceState(@NonNull Bundle outState) {
         super.onSaveInstanceState(outState);
-
-
+        outState.putInt("counter", mCounter);
 
         NightMode = AppCompatDelegate.getDefaultNightMode();
 
@@ -56,10 +56,16 @@ public class MainActivity extends AppCompatActivity {
         editor.apply();
     }
 
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        /*Toast.makeText(this,"Loading...",Toast.LENGTH_SHORT).show();*/
         super.onCreate(savedInstanceState);
+
+        if (savedInstanceState != null) {
+            mCounter = savedInstanceState.getInt("counter");
+        }
+
         binding = ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
         replaceFragment(new home());
@@ -67,7 +73,9 @@ public class MainActivity extends AppCompatActivity {
 
         sharedPreferences = getSharedPreferences("SharedPrefs", MODE_PRIVATE);
         NightMode = sharedPreferences.getInt("NightModeInt", 1);
+        Toast.makeText(this, "Loading...", Toast.LENGTH_SHORT).show();
         AppCompatDelegate.setDefaultNightMode(NightMode);
+
 
 
 
@@ -130,7 +138,7 @@ public class MainActivity extends AppCompatActivity {
     private void buildAlertMessageNoGps() {
         final MaterialAlertDialogBuilder builder = new MaterialAlertDialogBuilder(this, R.style.CustomDialogTheme);
         builder.setIcon(R.drawable.locationoutlined);
-        builder.setTitle("Location Services or GPS is OFF");
+        builder.setTitle("Location Services or GPS is turned OFF!");
         builder.setMessage("Location Services (GPS) is required to run the app. Please enable it in settings.")
                 .setCancelable(false)
                 .setPositiveButton("Enable Location Services", new DialogInterface.OnClickListener() {
@@ -138,11 +146,6 @@ public class MainActivity extends AppCompatActivity {
                         startActivity(new Intent(android.provider.Settings.ACTION_LOCATION_SOURCE_SETTINGS));
                     }
                 });
-                /*.setNegativeButton("No", new DialogInterface.OnClickListener() {
-                    public void onClick(final DialogInterface dialog, final int id) {
-                        dialog.cancel();
-                    }
-                });*/
         builder.show();
     }
 
@@ -174,16 +177,6 @@ public class MainActivity extends AppCompatActivity {
 //        }
 //    };
 
-    //private void init(){
-    //Button btnMap = (Button) findViewById(R.id.btnMap);
-    //btnMap.setOnClickListener(new View.OnClickListener() {
-    //@Override
-    //public void onClick(View v) {
-    //Intent intent = new Intent(MainActivity.this, MapActivity.class);
-    //startActivity(intent);
-    // }
-    // });
-    //}
     public boolean isServicesOK(){
         Log.d(TAG, "isServicesOK: checking google services version");
         int available = GoogleApiAvailability.getInstance().isGooglePlayServicesAvailable(MainActivity.this);
@@ -206,7 +199,7 @@ public class MainActivity extends AppCompatActivity {
     public void onBackPressed() {
 
         if (this.navigationView.getSelectedItemId() == R.id.homefragment) {
-            MaterialAlertDialogBuilder builder = new MaterialAlertDialogBuilder(this, R.style.ThemeOverlay_Material3_MaterialAlertDialog_Centered);
+            MaterialAlertDialogBuilder builder = new MaterialAlertDialogBuilder(this, R.style.CustomDialogTheme);
             builder.setTitle("Are you sure you want to exit the app?");
             builder.setIcon(R.drawable.exitapp);
             builder.setNegativeButton("No", MainActivity$$ExternalSyntheticLambda1.INSTANCE);

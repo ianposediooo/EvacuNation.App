@@ -34,4 +34,7 @@ public class VPAdapter extends FragmentPagerAdapter {
         this.fragmentList.add(fragment);
         this.snippetList.add(str);
     }
+
+
+
 }
