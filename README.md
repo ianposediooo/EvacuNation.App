@@ -53,27 +53,3 @@ I am a fresh graduate with a deep passion for coding and building mobile applica
 | <img alt="[photo_2_2023-02-24_00-48-56]" src="https://user-images.githubusercontent.com/107023328/220977901-ac5b34db-ecea-4cf5-a1d5-4e1da40632eb.jpg" width="200"> | <img alt="[photo_4_2023-02-24_00-48-56]" src="https://user-images.githubusercontent.com/107023328/220977943-bfc5d087-63b2-47ef-8710-3ddc633d36c5.jpg" width="200"> | <img alt="[photo_10_2023-02-24_00-48-56]" src="https://user-images.githubusercontent.com/107023328/220977926-761e8c55-27f0-417c-8c8b-ef97c4aefcbf.jpg" width="200"> | <img alt="[photo_3_2023-02-24_00-48-56]" src="https://user-images.githubusercontent.com/107023328/220977935-c277866b-2d08-4314-8ead-dee078a61d57.jpg" width="200"> |
 |:---:|:---:|:---:|:---:|
 | Call 911 | Emergency Message | Hotlines | Evacuation Offline Lists |
-
-## License
-
-MIT License
-
-Copyright (c) 2023 Ian Baldwin Posedio
-
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
