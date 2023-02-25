@@ -4,7 +4,7 @@
 
 # Evacunation Android App
 
-An Evacuation Center Locator And Disaster Preparedness Mobile Application
+An Evacuation Center Locator And Disaster Preparedness Mobile Application (Philippines)
 
 
 ## 💿 Installation
