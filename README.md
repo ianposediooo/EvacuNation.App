@@ -53,3 +53,9 @@ I am a fresh graduate with a deep passion for coding and building mobile applica
 | <img alt="[photo_2_2023-02-24_00-48-56]" src="https://user-images.githubusercontent.com/107023328/220977901-ac5b34db-ecea-4cf5-a1d5-4e1da40632eb.jpg" width="200"> | <img alt="[photo_4_2023-02-24_00-48-56]" src="https://user-images.githubusercontent.com/107023328/220977943-bfc5d087-63b2-47ef-8710-3ddc633d36c5.jpg" width="200"> | <img alt="[photo_10_2023-02-24_00-48-56]" src="https://user-images.githubusercontent.com/107023328/220977926-761e8c55-27f0-417c-8c8b-ef97c4aefcbf.jpg" width="200"> | <img alt="[photo_3_2023-02-24_00-48-56]" src="https://user-images.githubusercontent.com/107023328/220977935-c277866b-2d08-4314-8ead-dee078a61d57.jpg" width="200"> |
 |:---:|:---:|:---:|:---:|
 | Call 911 | Emergency Message | Hotlines | Evacuation Offline Lists |
+
+
+## 🗂️ License
+
+EvacuNation App is released under the GNU General Public License v3.0
+(GPLv3), which can be found [here](LICENSE.md)
