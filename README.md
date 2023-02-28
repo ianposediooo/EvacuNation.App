@@ -9,7 +9,7 @@ An Evacuation Center Locator And Disaster Preparedness Mobile Application (Phili
 
 ## 💿 Installation
 
-To install this project, go to Releases, find the most recent release, and then download and install the .apk file on your Android device.
+To install this application, go to Releases, find the most recent release, and then download and install the .apk file on your Android device.
     
 ## 📃 Features
 
