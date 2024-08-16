@@ -62,25 +62,6 @@ public class MapActivity extends AppCompatActivity implements OnMapReadyCallback
             if (ActivityCompat.checkSelfPermission(this, FINE_LOCATION) == 0 || ActivityCompat.checkSelfPermission(this, COARSE_LOCATION) == 0) {
                 this.mMap.setMyLocationEnabled(true);
                 this.mMap.setMapType(GoogleMap.MAP_TYPE_NORMAL);
-                try {
-                    GeoJsonLayer layer = new GeoJsonLayer(mMap, R.raw.phfaultslines, this);
-                    GeoJsonPolygonStyle polygonStyle = layer.getDefaultPolygonStyle();
-                    polygonStyle.setStrokeColor(Color.RED);
-                    polygonStyle.setStrokeWidth(1);
-                    layer.addLayerToMap();
-                } catch (JSONException | IOException e) {
-                    e.printStackTrace();
-                }
-                Toast.makeText(this, "Black Solid Lines are Fault Lines", Toast.LENGTH_LONG).show();
-                /*try {
-                    GeoJsonLayer layer = new GeoJsonLayer(mMap, R.raw.boundaries, this);
-                    GeoJsonPolygonStyle polygonStyle = layer.getDefaultPolygonStyle();
-                    polygonStyle.setStrokeColor(Color.GRAY);
-                    polygonStyle.setStrokeWidth(3);
-                    layer.addLayerToMap();
-                } catch (JSONException | IOException e) {
-                    e.printStackTrace();
-                }*/
                 this.mMap.getUiSettings().setMyLocationButtonEnabled(true);
                 this.mMap.getUiSettings().setCompassEnabled(true);
                 this.mMap.getUiSettings().setZoomControlsEnabled(true);
