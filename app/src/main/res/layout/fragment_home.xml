@@ -26,10 +26,11 @@
         app:tabTextColor="?android:attr/textColorHint"
         tools:ignore="SpeakableTextPresentCheck" />
 
-    <androidx.viewpager.widget.ViewPager
+    <com.example.evacunation.NonSwipableViewPager
         android:id="@+id/viewpager2"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_below="@+id/tabs"
         tools:ignore="SpeakableTextPresentCheck" />
+
 </RelativeLayout>

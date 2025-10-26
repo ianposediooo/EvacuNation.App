@@ -198,6 +198,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     public void onBackPressed() {
 
+        super.onBackPressed();
         if (this.navigationView.getSelectedItemId() == R.id.homefragment) {
             MaterialAlertDialogBuilder builder = new MaterialAlertDialogBuilder(this, R.style.CustomDialogTheme);
             builder.setTitle("Are you sure you want to exit the app?");

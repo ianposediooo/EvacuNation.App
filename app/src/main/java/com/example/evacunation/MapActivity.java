@@ -123,14 +123,14 @@ public class MapActivity extends AppCompatActivity implements OnMapReadyCallback
         } catch (IOException e) {
             Log.d(TAG, "geoLocate: IOException: " + e.getMessage());
         }
-        if (arrayList.size() > 0) {
+        assert arrayList != null;
+        if (!arrayList.isEmpty()) {
             Address address = arrayList.get(0);
             Log.d(TAG, "geoLocate: found a location: " + address.toString());
             moveCamera(new LatLng(address.getLatitude(), address.getLongitude()), DEFAULT_ZOOM, address.getAddressLine(0));
         }
     }
 
-    /* JADX INFO: Access modifiers changed from: private */
     public void getDeviceLocation() {
         Log.d(TAG, "getDeviceLocation: getting the devices current location");
         FusedLocationProviderClient mFusedLocationProviderClient = LocationServices.getFusedLocationProviderClient(this);
@@ -155,7 +155,6 @@ public class MapActivity extends AppCompatActivity implements OnMapReadyCallback
         }
     }
 
-    /* JADX INFO: Access modifiers changed from: private */
     public void moveCamera(LatLng latLng, float f, String str) {
         Log.d(TAG, "moveCamera: moving the camera to: lat: " + latLng.latitude + ", lng " + latLng.longitude);
         this.mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(latLng, f));

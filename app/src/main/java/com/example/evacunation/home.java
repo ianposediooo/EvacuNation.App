@@ -2,24 +2,24 @@ package com.example.evacunation;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
-import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
 import androidx.fragment.app.Fragment;
-import androidx.viewpager.widget.ViewPager;
 import com.google.android.material.tabs.TabLayout;
 
 /* loaded from: classes.dex */
 public class home extends Fragment {
     View myFragment;
     TabLayout tabLayout;
-    ViewPager viewPager;
+    // ⚠️ CHANGED: Use the custom NonSwipableViewPager
+    NonSwipableViewPager viewPager;
 
     @Override // androidx.fragment.app.Fragment
     public View onCreateView(LayoutInflater layoutInflater, ViewGroup viewGroup, Bundle bundle) {
         View inflate = layoutInflater.inflate(R.layout.fragment_home, viewGroup, false);
         this.myFragment = inflate;
-        this.viewPager = (ViewPager) inflate.findViewById(R.id.viewpager2);
+        // ⚠️ CHANGED: Cast to the custom NonSwipableViewPager
+        this.viewPager = (NonSwipableViewPager) inflate.findViewById(R.id.viewpager2);
         this.tabLayout = (TabLayout) this.myFragment.findViewById(R.id.tabs);
         return this.myFragment;
     }
@@ -27,9 +27,11 @@ public class home extends Fragment {
     @Override // androidx.fragment.app.Fragment
     public void onActivityCreated(Bundle bundle) {
         super.onActivityCreated(bundle);
+        // The rest of your code remains the same as the custom ViewPager
+        // allows programmatic scrolling (via the tabs) but prevents touch swiping.
         setUpViewPager(this.viewPager);
         this.tabLayout.setupWithViewPager(this.viewPager);
-        this.tabLayout.addOnTabSelectedListener((TabLayout.OnTabSelectedListener) new TabLayout.OnTabSelectedListener() { // from class: com.example.evacunation.home.1
+        this.tabLayout.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() { // from class: com.example.evacunation.home.1
             @Override // com.google.android.material.tabs.TabLayout.BaseOnTabSelectedListener
             public void onTabReselected(TabLayout.Tab tab) {
             }
@@ -44,7 +46,8 @@ public class home extends Fragment {
         });
     }
 
-    private void setUpViewPager(ViewPager viewPager) {
+    // ⚠️ CHANGED: Change parameter type to the custom NonSwipableViewPager
+    private void setUpViewPager(NonSwipableViewPager viewPager) {
         VPAdapter vPAdapter = new VPAdapter(getChildFragmentManager());
         vPAdapter.addFragment(new disasterfragment(), "Tips");
         vPAdapter.addFragment(new news(), "News");
