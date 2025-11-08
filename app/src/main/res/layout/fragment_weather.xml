@@ -14,4 +14,47 @@
         android:layout_height="5dp"
         android:theme="@style/pbarcolor" />
 
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="20dp">
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/logo"
+                style="@style/Widget.Material3.CardView.Elevated"
+                android:layout_width="match_parent"
+                android:layout_height="81dp"
+                android:layout_alignParentEnd="true"
+                android:elevation="10dp"
+                app:cardBackgroundColor="?attr/colorPrimary"
+                app:cardCornerRadius="20dp">
+
+                <TextView
+                    android:id="@+id/txtdisaster"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="25dp"
+                    android:layout_toStartOf="@+id/logo"
+                    android:shadowDx="2"
+                    android:shadowDy="2"
+                    android:shadowRadius="3"
+                    android:text="WINDY\nFORECAST"
+                    android:textColor="?attr/colorOnPrimary"
+                    android:textSize="24sp"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:layout_margin="3dp"
+                    android:layout_gravity="right"
+                    android:layout_width="120dp"
+                    android:layout_height="74dp"
+                    android:src="@drawable/evaclogo_2" />
+
+            </com.google.android.material.card.MaterialCardView>
+        </RelativeLayout>
+
 </RelativeLayout>

@@ -73,7 +73,6 @@ public class MainActivity extends AppCompatActivity {
 
         sharedPreferences = getSharedPreferences("SharedPrefs", MODE_PRIVATE);
         NightMode = sharedPreferences.getInt("NightModeInt", 1);
-        Toast.makeText(this, "Loading...", Toast.LENGTH_SHORT).show();
         AppCompatDelegate.setDefaultNightMode(NightMode);
 
 

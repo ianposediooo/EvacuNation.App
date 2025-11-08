@@ -11,8 +11,8 @@
         android:icon="@drawable/locationoutlined" />
     <item
         android:id="@+id/weather"
-        android:title="@string/weather"
-        android:icon="@drawable/weather_selector" />
+        android:title="Windy"
+        android:icon="@drawable/cyclone_selector" />
     <item
         android:id="@+id/tools"
         android:title="@string/tools"
