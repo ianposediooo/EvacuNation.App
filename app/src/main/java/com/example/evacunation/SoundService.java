@@ -47,33 +47,27 @@ public class SoundService extends Service {
     public int onStartCommand(Intent intent, int flags, int startId) {
         if (mediaPlayer == null) {
 
-            // 1. SAVE original state
             originalAudioMode = audioManager.getMode();
             originalSpeakerphoneState = audioManager.isSpeakerphoneOn();
 
-            // 2. FORCE AUDIO ROUTING (Most Aggressive)
-            // Use the highest priority audio mode: MODE_IN_CALL.
-            audioManager.setMode(AudioManager.MODE_IN_CALL);
+            audioManager.setMode(AudioManager.MODE_RINGTONE);
 
-            // Explicitly route this high-priority audio to the internal speaker.
             audioManager.setSpeakerphoneOn(true);
 
-            // 3. Set the stream to maximum volume
-            // Use STREAM_VOICE_CALL, which is the stream used for MODE_IN_CALL.
-            final int streamType = AudioManager.STREAM_VOICE_CALL;
+
+            final int streamType = AudioManager.STREAM_ALARM;
 
             int maxVolume = audioManager.getStreamMaxVolume(streamType);
             audioManager.setStreamVolume(streamType, maxVolume, 0);
 
-            // 4. Initialize MediaPlayer with the highest priority stream type
             mediaPlayer = new MediaPlayer();
             try {
-                // Set stream type BEFORE setting data source (deprecated but useful)
+
                 mediaPlayer.setAudioStreamType(streamType);
                 if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
                     mediaPlayer.setDataSource(getResources().openRawResourceFd(R.raw.sos_sound));
                 }
-                mediaPlayer.prepare(); // Use prepare() for resource file descriptor
+                mediaPlayer.prepare();
             } catch (IOException e) {
                 e.printStackTrace();
             }
